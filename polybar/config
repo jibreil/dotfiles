@@ -1,0 +1,347 @@
+;=====================================================
+;     __ __ _             __    ___   ___  _
+;    / //_/(_)___  ___ _ / /__ |_  | |_  |( )___
+;   / ,<  / // _ \/ _ `//  '_// __/ / __/ |/(_-<
+;  /_/|_|/_//_//_/\_, //_/\_\/____//____/  /___/
+;                /___/
+;
+;     ___         __       __
+;    / _ \ ___   / /__ __ / /  ___ _ ____
+;   / ___// _ \ / // // // _ \/ _ `// __/
+;  /_/    \___//_/ \_, //_.__/\_,_//_/
+;                 /___/
+;
+;     _____             ___ _
+;    / ___/___   ___   / _/(_)___ _
+;   / /__ / _ \ / _ \ / _// // _ `/
+;   \___/ \___//_//_//_/ /_/ \_, /
+;                           /___/
+;=====================================================
+
+[colors]
+background = #E6000000
+background-alt = #E6222222
+foreground = #E6BDBDBD
+underline = ${xrdb:color5}
+primary = ${xrdb:color5}
+secondary = #bf5f4d
+alert = #CA2C2C
+
+;=====================================================
+
+[sizes]
+bar-width = 1352
+bar-height = 30
+
+bar-offset-x = 14
+bar-top-gap = 6
+bar-bottom-gap = 10
+
+;=====================================================
+
+[bar/example]
+monitor = eDP-1
+bottom = true
+fixed-center = true
+width = ${sizes.bar-width}
+height = ${sizes.bar-height}
+radius = 2.0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #ffffff
+
+border-size = 0
+border-color = #00000000
+border-left-size = ${sizes.bar-offset-x}
+border-left-color = #00000000
+;border-top-size = ${sizes.bar-top-gap}
+border-bottom-size = ${sizes.bar-bottom-gap}
+
+padding-left = 0
+padding-right = 3
+
+module-margin-left = 2
+module-margin-right = 3
+
+font-0 = FontAwesome:size=8;0
+font-1 = NotoSans-Regular:size=8;0
+font-2 = Kochi Gothic:size=8;0
+
+modules-left = i3 xwindow
+modules-center =
+modules-right = xkeyboard volume backlight-acpi filesystem wlan eth battery date
+
+;separator = |
+
+tray-position = right
+tray-detached = false
+tray-padding = 1
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+label-layout-underline = ${colors.primary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.primary}
+label-indicator-underline = ${colors.primary}
+
+;=====================================================
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+;=====================================================
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+;=====================================================
+;
+;   Modules
+;
+;=====================================================
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+;=====================================================
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <ramp> <label>
+label = %percentage%%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+;=====================================================
+
+[module/battery]
+type = internal/battery
+full-at = 100
+battery = BAT0
+adapter = ADP0
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.alert}
+
+format-discharging = <ramp-capacity> <label-discharging>
+;format-discharging-underline = ${colors.foreground}
+
+format-full = <ramp-capacity> <label-full>
+format-full-underline = ${colors.primary}
+
+label-charging = %percentage%%
+
+label-discharging = %percentage%%
+
+label-full = Fully charged
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.alert}
+animation-charging-framerate = 750
+
+;=====================================================
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <label>
+
+label = CPU %percentage%%
+
+ramp-load-0 = ▁
+ramp-load-1 = ▂
+ramp-load-2 = ▃
+ramp-load-3 = ▄
+ramp-load-4 = ▅
+ramp-load-5 = ▆
+ramp-load-6 = ▇
+ramp-load-7 = █
+
+
+;=====================================================
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %a %e %b
+time = %I:%M %p
+date-alt = %d-%m-%Y
+time-alt = %H:%M
+
+format =  <label>
+format-foreground = ${colors.foreground}
+
+label = %time%, %date%
+
+;=====================================================
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 30
+
+format-mounted = <label-mounted>
+label-mounted =   %mountpoint%: %free%
+
+format-unmounted = <label-unmounted>
+label-unmounted =   %mountpoint%: not mounted
+
+;=====================================================
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = true
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.background}
+
+label-focused = %name%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.underline}
+label-focused-padding = 4
+
+label-unfocused = %name%
+label-unfocused-padding = 4
+
+label-visible = %name%
+label-visible-underline = ${colors.secondary}
+label-visible-padding = 4
+
+label-urgent = %name%
+;label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 4
+
+;=====================================================
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+format = <label>
+label = RAM %percentage_used%%
+
+;=====================================================
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+;=====================================================
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+
+format-disconnected = <label-disconnected>
+label-disconnected =  %ifname%: dc
+
+;==========================
+
+[module/eth]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+
+format-disconnected = <label-disconnected>
+label-disconnected =  %ifname%: dc
+
+;=====================================================
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <label>
+format-warn = <label-warn>
+format-warn-underline = ${colors.alert}
+
+label = %temperature%
+label-warn = TEMP: %temperature%
+
+;=====================================================
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume>
+label-volume =  %percentage%%
+
+format-muted = <label-muted>
+label-muted =  mute
+
+;=====================================================
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format = <label-indicator>
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.alert}
+
+;=====================================================
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+
+;=====================================================
+;
+;   End Modules
+;
+;=====================================================

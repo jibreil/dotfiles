@@ -1,0 +1,3 @@
+URxvt.scrollBar: false
+URxvt.externalBorder: 0
+URxvt.internalBorder: 25
