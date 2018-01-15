@@ -119,7 +119,7 @@ bindsym $mod+Shift+s exec i3-scrot
 
 
 ## Suspend
-bindsym $mod+s exec i3lock-fancy -p -t "" & systemctl suspend
+bindsym $mod+s exec i3lock-fancy -t "" & systemctl suspend
 
 
 ## URxvt
