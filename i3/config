@@ -48,7 +48,7 @@ bindsym $mod+Shift+q kill
 
 
 ## Lock
-bindsym $mod+l exec i3lock-fancy -p -t ""
+bindsym $mod+l exec i3lock-fancy -t ""
 
 
 ## Misc
