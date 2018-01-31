@@ -56,7 +56,6 @@ line-color = #ffffff
 border-size = 0
 border-color = #00000000
 border-left-size = ${sizes.bar-offset-x}
-border-left-color = #00000000
 ;border-top-size = ${sizes.bar-top-gap}
 border-bottom-size = ${sizes.bar-bottom-gap}
 
@@ -72,7 +71,7 @@ font-2 = Kochi Gothic:size=8;0
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = xkeyboard volume backlight-acpi filesystem wlan eth battery date
+modules-right = xkeyboard wlan eth volume backlight-acpi battery date
 
 ;separator = |
 
