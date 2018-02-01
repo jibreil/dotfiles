@@ -45,10 +45,6 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 
-## Fullscreen
-bindsym $mod+f fullscreen toggle
-
-
 ## Gaps
 gaps inner 15
 gaps outer 0
@@ -56,6 +52,11 @@ gaps outer 0
 
 ## Kill Window
 bindsym $mod+Shift+q kill
+
+
+## Layout
+bindsym $mod+f fullscreen toggle
+bindsym $mod+t layout toggle
 
 
 ## Lock
