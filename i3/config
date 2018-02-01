@@ -134,7 +134,7 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 ## Wallpaper/Colours
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id wal -n -i ~/Pictures/wp/roads.jpg
+exec_always --no-startup-id wal -i ~/Pictures/wp/starry.jpg
 
 
 ## Window Split Direction
