@@ -18,6 +18,17 @@
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
+## Borders
+for_window [class=".*"] border pixel 0
+for_window [class="URxvt"] border pixel 2
+
+# class                 border    bg        text      indicator   child_border
+client.focused          #525c6b   #0a0b10   #848474   #525c6b     #525c6b
+client.focused_inactive #525c6b   #0a0b10   #848474   #525c6b     #525c6b
+client.unfocused        #525c6b   #0a0b10   #848474   #525c6b     #525c6b
+client.urgent           #2f343a   #900000   #ffffff   #900000
+
+
 ## Brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
@@ -49,10 +60,6 @@ bindsym $mod+Shift+q kill
 
 ## Lock
 bindsym $mod+l exec i3lock-fancy -t ""
-
-
-## Misc
-for_window [class="^.*"] border pixel 0
 
 
 ## Mod Key
