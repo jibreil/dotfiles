@@ -55,3 +55,4 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+nnoremap <esc> :noh<return><esc>
