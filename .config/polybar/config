@@ -17,8 +17,10 @@
 ;=====================================================
 
 [colors]
-background = #E6000000
-background-alt = #E6222222
+;background = #E6000000
+background = ${xrdb:color0}
+;background-alt = #E6222222
+background-alt = #25262c
 foreground = #E6BDBDBD
 underline = ${xrdb:color5}
 primary = ${xrdb:color5}
