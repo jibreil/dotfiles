@@ -67,15 +67,15 @@ font-0 = FontAwesome:size=8;0
 font-1 = NotoSans-Regular:size=8;0
 font-2 = Kochi Gothic:size=8;0
 
-modules-left = i3 xwindow
-modules-center =
+modules-left = i3
+modules-center = xwindow
 modules-right = xkeyboard wlan eth volume backlight-acpi battery date
 
 ;separator = |
 
-tray-position = right
-tray-detached = false
-tray-padding = 1
+;tray-position = right
+;tray-detached = false
+;tray-padding = 1
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -118,7 +118,7 @@ card = intel_backlight
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <ramp> <label>
+format = <label>  <ramp>
 label = %percentage%%
 
 ramp-0 = 🌕
@@ -135,13 +135,13 @@ full-at = 100
 battery = BAT0
 adapter = ADP0
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>  <animation-charging>
 format-charging-underline = ${colors.alert}
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging>  <ramp-capacity>
 ;format-discharging-underline = ${colors.primary}
 
-format-full = <ramp-capacity> <label-full>
+format-full = <label-full>  <ramp-capacity>
 format-full-underline = ${colors.primary}
 
 label-charging = %percentage%%
@@ -196,7 +196,7 @@ time = %I:%M %p
 date-alt = %d-%m-%Y
 time-alt = %H:%M
 
-format =  <label>
+format = <label>  
 format-foreground = ${colors.foreground}
 
 label = %time%, %date%
@@ -276,10 +276,12 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
-label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+;label-connected = %ifname%: %local_ip% on %essid%, %signal%%  
+label-connected = %essid%  
 
 format-disconnected = <label-disconnected>
-label-disconnected =  %ifname%: dc
+;label-disconnected = %ifname%: dc  
+label-disconnected = dc  
 
 ;==========================
 
@@ -289,10 +291,12 @@ interface = enp2s0
 interval = 3.0
 
 format-connected = <label-connected>
-label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+;label-connected = %ifname%: %local_ip% on %essid%, %signal%% 
+label-connected = %essid%  
 
 format-disconnected = <label-disconnected>
-label-disconnected =  %ifname%: dc
+;label-disconnected = %ifname%: dc  
+label-disconnected = dc  
 
 ;=====================================================
 
@@ -314,10 +318,10 @@ label-warn = TEMP: %temperature%
 type = internal/volume
 
 format-volume = <label-volume>
-label-volume =  %percentage%%
+label-volume = %percentage%%  
 
 format-muted = <label-muted>
-label-muted =  mute
+label-muted = mute  
 
 ;=====================================================
 
