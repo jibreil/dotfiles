@@ -44,6 +44,14 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 
+## Floating
+floating_modifier $mod
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+
 ## Gaps
 gaps inner 15
 gaps outer 0
