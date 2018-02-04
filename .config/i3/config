@@ -53,7 +53,7 @@ bindsym $mod+space focus mode_toggle
 
 
 ## Gaps
-gaps inner 15
+gaps inner 30
 gaps outer 0
 
 
@@ -115,12 +115,13 @@ bindsym $mod+Shift+r restart
 ## Resize Windows
 bindsym $mod+r mode "resize"
 mode "resize" {
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Up resize grow height
+    bindsym Down resize shrink height
+    bindsym Right resize grow width
+    bindsym Left resize shrink width
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 
