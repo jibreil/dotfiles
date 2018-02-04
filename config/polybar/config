@@ -37,12 +37,12 @@ alert = #CA2C2C
 ;=====================================================
 
 [sizes]
-bar-width = 1336
+bar-width = 1326
 bar-height = 35
 
-bar-offset-x = 30
+bar-offset-x = 40
 bar-top-gap = 6
-bar-bottom-gap = 10
+bar-bottom-gap = 30
 
 ;=====================================================
 
