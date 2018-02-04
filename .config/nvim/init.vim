@@ -40,7 +40,7 @@ augroup General
 
     autocmd FileType markdown,text setlocal spell
 
-    autocmd BufReadPost * Goyo 80%x90%
+    autocmd BufReadPost * Goyo 90%x90%
     autocmd VimResized * execute "normal \<C-W>="
 
 augroup END
