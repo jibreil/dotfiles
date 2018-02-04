@@ -38,7 +38,7 @@ alert = #CA2C2C
 
 [sizes]
 bar-width = 1336
-bar-height = 30
+bar-height = 35
 
 bar-offset-x = 30
 bar-top-gap = 6
@@ -66,8 +66,8 @@ border-left-size = ${sizes.bar-offset-x}
 ;border-top-size = ${sizes.bar-top-gap}
 border-bottom-size = ${sizes.bar-bottom-gap}
 
-padding-left = 0
-padding-right = 3
+padding-left = 3
+padding-right = 5
 
 module-margin-left = 2
 module-margin-right = 3

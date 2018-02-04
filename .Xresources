@@ -14,7 +14,7 @@ URxvt.cursorBlink: 1
 URxvt.letterSpace: 0
 URxvt.scrollBar: false
 URxvt.externalBorder: 0
-URxvt.internalBorder: 25
+URxvt.internalBorder: 30
 
 ! rofi
 rofi.font: scientifica Regular 8

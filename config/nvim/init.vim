@@ -96,9 +96,10 @@ set breakindent
 
 "=====================================================
 
-" Spelling language
+" Spelling
 
 set spelllang=en_au
+hi SpellBad ctermbg=1 ctermfg=0
 
 "=====================================================
 
