@@ -20,7 +20,7 @@
 background = ${xrdb:color0}
 
 ; dark
-background-alt = #25262c
+background-alt = #171a25
 foreground = #E6BDBDBD
 ; end
 
