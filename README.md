@@ -14,4 +14,4 @@
 
 ```
 
-![screenshot](sc.png)
+![screenshot](screenshot.png)
