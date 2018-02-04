@@ -16,7 +16,7 @@
 ;                           /___/
 ;=====================================================
 
-[colors]
+[colours]
 background = ${xrdb:color0}
 
 ; dark
@@ -54,8 +54,8 @@ width = ${sizes.bar-width}
 height = ${sizes.bar-height}
 radius = 2.0
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colours.background}
+foreground = ${colours.foreground}
 
 line-size = 2
 line-color = #ffffff
@@ -89,12 +89,12 @@ modules-right = xkeyboard wlan eth volume backlight-acpi battery date
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-label-layout-underline = ${colors.primary}
+label-layout-underline = ${colours.primary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.primary}
-label-indicator-underline = ${colors.primary}
+label-indicator-background = ${colours.primary}
+label-indicator-underline = ${colours.primary}
 
 ;=====================================================
 
@@ -145,13 +145,13 @@ battery = BAT0
 adapter = ADP0
 
 format-charging = <label-charging>  <animation-charging>
-format-charging-underline = ${colors.alert}
+format-charging-underline = ${colours.alert}
 
 format-discharging = <label-discharging>  <ramp-capacity>
-;format-discharging-underline = ${colors.primary}
+;format-discharging-underline = ${colours.primary}
 
 format-full = <label-full>  <ramp-capacity>
-format-full-underline = ${colors.primary}
+format-full-underline = ${colours.primary}
 
 label-charging = %percentage%%
 
@@ -164,14 +164,14 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.foreground}
+ramp-capacity-foreground = ${colours.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colors.alert}
+animation-charging-foreground = ${colours.alert}
 animation-charging-framerate = 750
 
 ;=====================================================
@@ -206,7 +206,7 @@ date-alt = %d-%m-%Y
 time-alt = %H:%M
 
 format = <label>  
-format-foreground = ${colors.foreground}
+format-foreground = ${colours.foreground}
 
 label = %time%, %date%
 
@@ -233,24 +233,24 @@ wrapping-scroll = true
 
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-background = ${colors.background}
+label-mode-background = ${colours.background}
 
 label-focused = %name%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.underline}
+label-focused-foreground = ${colours.foreground}
+label-focused-background = ${colours.background-alt}
+label-focused-underline = ${colours.underline}
 label-focused-padding = 4
 
 label-unfocused = %name%
 label-unfocused-padding = 4
 
 label-visible = %name%
-label-visible-underline = ${colors.secondary}
+label-visible-underline = ${colours.secondary}
 label-visible-padding = 4
 
 label-urgent = %name%
-;label-urgent-background = ${colors.alert}
-label-urgent-underline = ${colors.alert}
+;label-urgent-background = ${colours.alert}
+label-urgent-underline = ${colours.alert}
 label-urgent-padding = 4
 
 ;=====================================================
@@ -316,7 +316,7 @@ warn-temperature = 60
 
 format = <label>
 format-warn = <label-warn>
-format-warn-underline = ${colors.alert}
+format-warn-underline = ${colours.alert}
 
 label = %temperature%
 label-warn = TEMP: %temperature%
@@ -342,7 +342,7 @@ format = <label-indicator>
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.alert}
+label-indicator-background = ${colours.alert}
 
 ;=====================================================
 
