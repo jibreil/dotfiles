@@ -54,7 +54,7 @@ bindsym $mod+space focus mode_toggle
 
 ## Gaps
 gaps inner 30
-gaps outer 0
+gaps outer 10
 
 
 ## Kill Window
