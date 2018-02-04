@@ -66,7 +66,7 @@ border-left-size = ${sizes.bar-offset-x}
 ;border-top-size = ${sizes.bar-top-gap}
 border-bottom-size = ${sizes.bar-bottom-gap}
 
-padding-left = 3
+padding-left = 2
 padding-right = 5
 
 module-margin-left = 2
