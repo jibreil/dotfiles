@@ -14,6 +14,4 @@
 
 ```
 
----
-
 ![screenshot](sc.png)
