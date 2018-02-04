@@ -18,11 +18,17 @@
 
 [colors]
 background = ${xrdb:color0}
-;background-alt = #E6222222
-;(light) background-alt = #cccccc
+
+; dark
 background-alt = #25262c
-;(light) foreground = #000000
 foreground = #E6BDBDBD
+; end
+
+; light
+;background-alt = #cccccc
+;foreground = #000000
+; end
+
 underline = ${xrdb:color5}
 primary = ${xrdb:color5}
 secondary = #bf5f4d
