@@ -72,10 +72,11 @@ padding-right = 5
 module-margin-left = 2
 module-margin-right = 3
 
-font-0 = FontAwesome:size=8;0
-font-1 = Scientifica:size=8;0
-font-2 = NotoSans-Regular:size=8;0
-font-3 = Kochi Gothic:size=8;0
+font-0 = WunconSiji
+font-1 = FontAwesome:size=8;0
+font-2 = Scientifica:size=8;0
+font-3 = NotoSans-Regular:size=8;0
+font-4 = Kochi Gothic:size=8;0
 
 modules-left = i3
 modules-center = xwindow
@@ -128,14 +129,12 @@ card = intel_backlight
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label>  <ramp>
+format = <ramp> <label>
 label = %percentage%%
 
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 ;=====================================================
 
@@ -145,35 +144,32 @@ full-at = 100
 battery = BAT0
 adapter = ADP0
 
-format-charging = <label-charging>  <animation-charging>
+format-charging = <label-charging>
+format-charging-foreground = ${colours.alert}
 format-charging-underline = ${colours.alert}
 
-format-discharging = <label-discharging>  <ramp-capacity>
+format-discharging = <ramp-capacity> <label-discharging>
 ;format-discharging-underline = ${colours.primary}
 
-format-full = <label-full>  <ramp-capacity>
+format-full = <label-full>
 format-full-underline = ${colours.primary}
 
-label-charging = %percentage%%
+label-charging =  %percentage%%
 
 label-discharging = %percentage%%
 
-label-full = Fully charged
+label-full =  fully charged
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colours.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colours.alert}
-animation-charging-framerate = 750
+animation-charging-framerate = 1000
 
 ;=====================================================
 
@@ -206,10 +202,10 @@ time = %I:%M %p
 date-alt = %d-%m-%Y
 time-alt = %H:%M
 
-format = <label>  
+format =   <label>
 format-foreground = ${colours.foreground}
 
-label = %time%, %date%
+label = %date%, %time%
 
 ;=====================================================
 
@@ -286,12 +282,12 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
-;label-connected = %ifname%: %local_ip% on %essid%, %signal%%  
-label-connected = %essid%  
+;label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+label-connected =  wifi: %essid%
 
 format-disconnected = <label-disconnected>
-;label-disconnected = %ifname%: dc  
-label-disconnected = dc  
+label-disconnected =  %ifname%: dc
+;label-disconnected =  dc
 
 ;==========================
 
@@ -301,12 +297,12 @@ interface = enp2s0
 interval = 3.0
 
 format-connected = <label-connected>
-;label-connected = %ifname%: %local_ip% on %essid%, %signal%% 
-label-connected = %essid%  
+;label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+label-connected =  eth: %essid%
 
 format-disconnected = <label-disconnected>
-;label-disconnected = %ifname%: dc  
-label-disconnected = dc  
+label-disconnected =  eth: dc
+;label-disconnected =  eth: dc
 
 ;=====================================================
 
@@ -328,10 +324,10 @@ label-warn = TEMP: %temperature%
 type = internal/volume
 
 format-volume = <label-volume>
-label-volume = %percentage%%  
+label-volume =  %percentage%%
 
 format-muted = <label-muted>
-label-muted = mute  
+label-muted =  mute
 
 ;=====================================================
 
