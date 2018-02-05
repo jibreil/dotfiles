@@ -286,7 +286,7 @@ format-connected = <label-connected>
 label-connected =  wifi: %essid%
 
 format-disconnected = <label-disconnected>
-label-disconnected =  %ifname%: dc
+label-disconnected =  wifi: dc
 ;label-disconnected =  dc
 
 ;==========================
