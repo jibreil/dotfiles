@@ -152,7 +152,8 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;format-discharging-underline = ${colours.primary}
 
 format-full = <label-full>
-format-full-underline = ${colours.primary}
+format-full-foreground = ${colours.alert}
+format-full-underline = ${colours.alert}
 
 label-charging =  %percentage%%
 
