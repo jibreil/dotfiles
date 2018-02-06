@@ -16,20 +16,20 @@
 
 ---
 
-![screenshot](screenshots/1.png)
+![screenshot](screenshots/neo.png)
 
 ---
 
-![screenshot](screenshots/2.png)
+![screenshot](screenshots/mus.png)
 
 ---
 
-![screenshot](screenshots/3.png)
+![screenshot](screenshots/col.png)
 
 ---
 
-![screenshot](screenshots/4.png)
+![screenshot](screenshots/busy.png)
 
 ---
 
-![screenshot](screenshots/5.png)
+![screenshot](screenshots/fun.png)
