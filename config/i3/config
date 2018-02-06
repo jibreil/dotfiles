@@ -112,6 +112,10 @@ bindsym $mod+Shift+w reload
 bindsym $mod+Shift+r restart
 
 
+## Restart Mopidy
+bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart mopidy
+
+
 ## Resize Windows
 bindsym $mod+r mode "resize"
 mode "resize" {
