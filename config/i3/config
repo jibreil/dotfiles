@@ -13,11 +13,11 @@
 #####################################################
 
 
-## Bar
+## bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
-## Borders
+## borders
 for_window [class=".*"] border pixel 0
 # for_window [class="URxvt"] border pixel 2
 
@@ -28,53 +28,50 @@ client.unfocused        #525c6b   #0a0b10   #848474   #525c6b     #525c6b
 client.urgent           #2f343a   #900000   #ffffff   #900000
 
 
-## Brightness
+## brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 
-## Compton
+## vompton
 exec --no-startup-id compton
 
 
-## Change Window Focus
+## change window focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 
-## Floating
-floating_modifier $mod
-# toggle tiling / floating
+## floating windows
 bindsym $mod+Shift+space floating toggle
-# change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 
-## Gaps
+## gaps
 gaps inner 30
 gaps outer 10
 
 
-## Kill Window
+## kill window
 bindsym $mod+Shift+q kill
 
 
-## Layout
+## layout
 bindsym $mod+f fullscreen toggle
 bindsym $mod+t layout toggle
 
 
-## Lock
+## lock
 bindsym $mod+l exec i3lock-fancy -t ""
 
 
-## Mod Key
+## mod key
 set $mod Mod4
 
 
-## Move Window to Workspace
+## move window to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -87,7 +84,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 
-## Move Window to Workspace and go to Workspace
+## move window to workspace and go to workspace
 bindsym $mod+Ctrl+1 move container to workspace 1; workspace 1
 bindsym $mod+Ctrl+2 move container to workspace 2; workspace 2
 bindsym $mod+Ctrl+3 move container to workspace 3; workspace 3
@@ -100,23 +97,23 @@ bindsym $mod+Ctrl+9 move container to workspace 9; workspace 9
 bindsym $mod+Ctrl+0 move container to workspace 10; workspace 10
 
 
-## Move Window Within Workspace
+## move window within workspace
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 
-## Reload/Restart i3
+## reload/restart i3
 bindsym $mod+Shift+w reload
 bindsym $mod+Shift+r restart
 
 
-## Restart Mopidy
+## restart Mopidy
 bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart mopidy
 
 
-## Resize Windows
+## resize windows
 bindsym $mod+r mode "resize"
 mode "resize" {
     bindsym Up resize grow height
@@ -129,16 +126,16 @@ mode "resize" {
 }
 
 
-## Rofi (To Replace Dmenu)
+## rofi (replacing dmenu)
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 
 
-## Screenshot
+## screenshot
 bindsym $mod+Shift+s exec i3-scrot
 
 
-## Suspend
+## suspend
 bindsym $mod+s exec i3lock-fancy -t "" & systemctl suspend
 
 
@@ -146,30 +143,30 @@ bindsym $mod+s exec i3lock-fancy -t "" & systemctl suspend
 bindsym $mod+Return exec urxvt --depth 32
 
 
-## Volume
+## volume
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 
-## Wallpaper/Colours
+## wallpaper/colours
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wp/ocean.jpg
 exec_always --no-startup-id wal -n -i ~/Pictures/wp/adtr.png
 
 
-## Window Split Direction
+## window split direction
 bindsym $mod+h split h
 bindsym $mod+v split v
 
 
-## Workspace Switching Settings
+## workspace switching settings
 workspace_auto_back_and_forth yes
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 
-## Workspace Switching
+## workspace switching
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
