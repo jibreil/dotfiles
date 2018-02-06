@@ -16,20 +16,20 @@
 
 ---
 
-![screenshot](screenshot1.png)
+![screenshot](screenshots/1.png)
 
 ---
 
-![screenshot](screenshot2.png)
+![screenshot](screenshots/2.png)
 
 ---
 
-![screenshot](screenshot3.png)
+![screenshot](screenshots/3.png)
 
 ---
 
-![screenshot](screenshot4.png)
+![screenshot](screenshots/4.png)
 
 ---
 
-![screenshot](screenshot5.png)
+![screenshot](screenshots/5.png)
