@@ -200,7 +200,7 @@ interval = 1
 
 date = %a %e %b
 time = %I:%M %p
-date-alt = %d-%m-%Y
+date-alt = %d.%m.%Y
 time-alt = %H:%M
 
 format =   <label>
