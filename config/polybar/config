@@ -29,10 +29,10 @@ foreground = #E6BDBDBD
 ;foreground = #000000
 ; end
 
-underline = ${xrdb:color5}
-primary = ${xrdb:color5}
+underline = ${xrdb:color2}
+primary = ${xrdb:color2}
 secondary = #bf5f4d
-alert = #CA2C2C
+alert = ${xrdb:color2}
 
 ;=====================================================
 
@@ -345,9 +345,9 @@ blacklist-0 = num lock
 
 format = <label-indicator>
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding = 3
 label-indicator-background = ${colours.alert}
+label-indicator-foreground = ${colours.background}
 
 ;=====================================================
 
