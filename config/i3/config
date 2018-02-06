@@ -45,6 +45,7 @@ bindsym $mod+Right focus right
 
 
 ## floating windows
+floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
