@@ -41,7 +41,7 @@ bar-width = 1326
 bar-height = 32
 
 bar-offset-x = 40
-bar-top-gap = 6
+bar-top-gap = 20
 bar-bottom-gap = 20
 
 ;=====================================================
@@ -78,7 +78,7 @@ font-2 = Scientifica:size=8;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
-modules-left = i3
+modules-left = i3 mpd
 modules-center = xwindow
 modules-right = xkeyboard wlan eth volume backlight-acpi battery date
 
@@ -264,16 +264,23 @@ label = RAM %percentage_used%%
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online =  <label-song> <icon-prev> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+label-song = %title% - %artist%
 
 label-song-maxlen = 25
 label-song-ellipsis = true
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 
 ;=====================================================
 
@@ -325,7 +332,7 @@ label-warn = TEMP: %temperature%
 type = internal/volume
 
 format-volume = <label-volume>
-label-volume =  %percentage%%
+label-volume =  %percentage%%
 
 format-muted = <label-muted>
 label-muted =  mute
