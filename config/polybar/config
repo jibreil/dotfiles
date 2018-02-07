@@ -32,7 +32,7 @@ foreground = #E6BDBDBD
 underline = ${xrdb:color2}
 primary = ${xrdb:color2}
 secondary = #bf5f4d
-alert = ${xrdb:color2}
+alert = #CA2C2C
 
 ;=====================================================
 
@@ -145,8 +145,8 @@ battery = BAT0
 adapter = ADP0
 
 format-charging = <label-charging>
-format-charging-foreground = ${colours.alert}
-format-charging-underline = ${colours.alert}
+format-charging-foreground = ${colours.primary}
+format-charging-underline = ${colours.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
 ;format-discharging-underline = ${colours.primary}
@@ -169,7 +169,7 @@ ramp-capacity-foreground = ${colours.foreground}
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = ${colours.alert}
+animation-charging-foreground = ${colours.primary}
 animation-charging-framerate = 1000
 
 ;=====================================================
@@ -346,7 +346,7 @@ blacklist-0 = num lock
 format = <label-indicator>
 
 label-indicator-padding = 3
-label-indicator-background = ${colours.alert}
+label-indicator-background = ${colours.primary}
 label-indicator-foreground = ${colours.background}
 
 ;=====================================================
