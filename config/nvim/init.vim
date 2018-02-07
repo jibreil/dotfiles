@@ -15,19 +15,6 @@
 "
 "=====================================================
 
-" PLUGINS
-
-" Plugin directory
-call plug#begin('~/.vim/plugged')
-
-" Plugin list
-Plug 'junegunn/goyo.vim'
-
-" End list
-call plug#end()
-
-"=====================================================
-
 " Always exit all files
 
 cnoreabbrev q qa
@@ -47,12 +34,6 @@ augroup END
 
 "=====================================================
 
-" Don't wrap in the middle of a word
-
-set linebreak
-
-"=====================================================
-
 " Hide UI
 
 set noshowmode
@@ -62,9 +43,37 @@ set cmdheight=2
 
 "=====================================================
 
+" Map wasd as movement keys
+
+noremap w k
+noremap a h
+noremap s j
+noremap d l
+
+"=====================================================
+
+" No wrapping in the middle of a word
+
+set linebreak
+
+"=====================================================
+
 " On pressing tab, insert 4 spaces
 
 set expandtab
+
+"=====================================================
+
+" PLUGINS
+
+" Plugin directory
+call plug#begin('~/.vim/plugged')
+
+" Plugin list
+Plug 'junegunn/goyo.vim'
+
+" End list
+call plug#end()
 
 "=====================================================
 
@@ -99,7 +108,7 @@ set breakindent
 " Spelling
 
 set spelllang=en_au
-hi SpellBad ctermbg=1 ctermfg=0
+hi SpellBad ctermbg=0 ctermfg=2
 
 "=====================================================
 
