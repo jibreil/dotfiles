@@ -267,7 +267,6 @@ type = internal/mpd
 format-online =  <label-song> <icon-prev> <toggle> <icon-next>
 
 label-song = %title% - %artist%
-
 label-song-maxlen = 25
 label-song-ellipsis = true
 
@@ -277,7 +276,7 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-bar-progress-width = 10
+bar-progress-width = 20
 bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
