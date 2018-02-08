@@ -45,10 +45,10 @@ set cmdheight=2
 
 " Map wasd as movement keys
 
-noremap w k
-noremap a h
-noremap s j
-noremap d l
+" noremap w k
+" noremap a h
+" noremap s j
+" noremap d l
 
 "=====================================================
 
@@ -64,13 +64,20 @@ set expandtab
 
 "=====================================================
 
-" PLUGINS
+" Pickachu
+
+let g:pickachu_default_date_format = "%d.%m.%Y"
+
+"=====================================================
+
+" Plugins
 
 " Plugin directory
 call plug#begin('~/.vim/plugged')
 
 " Plugin list
 Plug 'junegunn/goyo.vim'
+Plug 'DougBeney/pickachu'
 
 " End list
 call plug#end()
