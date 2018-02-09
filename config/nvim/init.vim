@@ -115,7 +115,7 @@ set breakindent
 " Spelling
 
 set spelllang=en_au
-hi SpellBad ctermbg=0 ctermfg=2
+hi SpellBad ctermbg=1 ctermfg=0
 
 "=====================================================
 
