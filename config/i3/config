@@ -20,11 +20,12 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 ## borders
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 3
+for_window [class="mpv"] border pixel 3
 
 # class                 border    bg        text      indicator   child_border
-client.focused          #525c6b   #0a0b10   #848474   #525c6b     #fff
-client.focused_inactive #525c6b   #0a0b10   #848474   #525c6b     #525c6b
-client.unfocused        #525c6b   #0a0b10   #848474   #525c6b     #525c6b
+client.focused          #b2b2b2   #0a0b10   #848474   #b2b2b2     #b2b2b2
+client.focused_inactive #3c3c3c   #0a0b10   #848474   #3c3c3c     #3c3c3c
+client.unfocused        #3c3c3c   #0a0b10   #848474   #3c3c3c     #3c3c3c
 client.urgent           #2f343a   #900000   #ffffff   #900000
 
 
