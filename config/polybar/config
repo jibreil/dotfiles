@@ -80,7 +80,7 @@ font-4 = Kochi Gothic:size=8;0
 
 modules-left = i3 mpd
 modules-center = xwindow
-modules-right = xkeyboard wlan eth volume backlight-acpi battery date
+modules-right = xkeyboard wlan volume backlight-acpi battery date
 
 ;separator = |
 
