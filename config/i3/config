@@ -192,7 +192,7 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 ## wallpaper/colours
 exec --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wp/grey.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wp/grey.png
 #exec_always --no-startup-id wal -b 111111 -g -n -i ~/Pictures/wp/adtr.png
 #exec_always --no-startup-id wal -g -i ~/Pictures/wp/grey.png
 
