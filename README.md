@@ -13,23 +13,3 @@
  \__,_/   \____/ \__/  /_/     /_/   /_/   \___/ /____/  
 
 ```
-
----
-
-![screenshot](screenshots/neo.png)
-
----
-
-![screenshot](screenshots/mus.png)
-
----
-
-![screenshot](screenshots/col.png)
-
----
-
-![screenshot](screenshots/busy.png)
-
----
-
-![screenshot](screenshots/fun.png)
