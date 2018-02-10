@@ -55,6 +55,45 @@ bindsym $mod+space focus mode_toggle
 gaps inner 30
 gaps outer 10
 
+bindsym $mod+g mode "gaps"
+mode "gaps" {
+  bindsym o mode "gaps_outer"
+  bindsym i mode "gaps_inner"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+mode "gaps_inner" {
+  bindsym plus  gaps inner current plus 5
+  bindsym minus gaps inner current minus 5
+  bindsym 0     gaps inner current set 0
+  bindsym r     gaps inner current set 30
+
+  bindsym Shift+plus  gaps inner all plus 5
+  bindsym Shift+minus gaps inner all minus 5
+  bindsym Shift+0     gaps inner all set 0
+  bindsym Shift+r     gaps inner all set 30
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+mode "gaps_outer" {
+  bindsym plus  gaps outer current plus 5
+  bindsym minus gaps outer current minus 5
+  bindsym 0     gaps outer current set 0
+  bindsym r     gaps outer current set 10
+
+  bindsym Shift+plus  gaps outer all plus 5
+  bindsym Shift+minus gaps outer all minus 5
+  bindsym Shift+0     gaps outer all set 0
+  bindsym Shift+r     gaps outer all set 10
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
 
 ## kill window
 bindsym $mod+Shift+q kill
@@ -118,13 +157,13 @@ bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart m
 ## resize windows
 bindsym $mod+r mode "resize"
 mode "resize" {
-    bindsym Up resize grow height
-    bindsym Down resize shrink height
-    bindsym Right resize grow width
-    bindsym Left resize shrink width
+  bindsym Up resize grow height
+  bindsym Down resize shrink height
+  bindsym Right resize grow width
+  bindsym Left resize shrink width
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 
