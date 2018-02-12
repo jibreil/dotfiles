@@ -19,7 +19,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ## borders
 for_window [class=".*"] border pixel 0
-for_window [class="URxvt"] border pixel 3
+#for_window [class="URxvt"] border pixel 3
 for_window [class="mpv"] border pixel 3
 
 # class                 border    bg        text      indicator   child_border
@@ -191,7 +191,7 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 
 ## wallpaper/colours
-exec --no-startup-id xrdb -load ~/.Xresources
+exec_always --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wp/grey.png
 #exec_always --no-startup-id wal -b 111111 -g -n -i ~/Pictures/wp/adtr.png
 #exec_always --no-startup-id wal -g -i ~/Pictures/wp/grey.png
