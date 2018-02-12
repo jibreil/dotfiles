@@ -17,20 +17,22 @@
 ;=====================================================
 
 [colours]
-background = ${xrdb:color0}
 
 ; dark
+background = ${xrdb:color0}
 background-alt = #2c2e2f
-foreground = #E6BDBDBD
+foreground = ${xrdb:color7}
+primary = ${xrdb:color2}
 ; end
 
 ; light
+;background = ${xrdb:color7}
 ;background-alt = #cccccc
-;foreground = #000000
+;foreground = ${xrdb:color0}
+;primary = ${xrdb:color1}
 ; end
 
-underline = ${xrdb:color2}
-primary = ${xrdb:color2}
+
 secondary = #bf5f4d
 alert = #CA2C2C
 
@@ -198,15 +200,24 @@ ramp-load-7 = █
 type = internal/date
 interval = 1
 
+label = %date%, %time%
+
 date = %a %e %b
 time = %I:%M %p
 date-alt = %d.%m.%Y
 time-alt = %H:%M
 
-format =   <label>
-format-foreground = ${colours.foreground}
+format = <label>
+format-padding = 0
+format-prefix = 
+format-prefix-padding = 1
 
-label = %date%, %time%
+format-prefix-foreground = ${colours.background}
+format-prefix-background = ${colours.primary}
+
+label-background = ${colours.foreground}
+label-foreground = ${colours.background}
+label-padding = 0
 
 ;=====================================================
 
@@ -236,7 +247,7 @@ label-mode-background = ${colours.background}
 label-focused = %name%
 label-focused-foreground = ${colours.foreground}
 label-focused-background = ${colours.background-alt}
-label-focused-underline = ${colours.underline}
+label-focused-underline = ${colours.primary}
 label-focused-padding = 4
 
 label-unfocused = %name%
