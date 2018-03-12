@@ -19,14 +19,14 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ## borders
 for_window [class=".*"] border pixel 0
-#for_window [class="URxvt"] border pixel 2
-#for_window [class="mpv"] border pixel 3
+for_window [class="URxvt"] border pixel 3
+for_window [class="mpv"] border pixel 3
 
 # class                 border    bg        text      indicator   child_border
-client.focused          #b2b2b2   #0a0b10   #848474   #b2b2b2     #b2b2b2
-client.focused_inactive #3c3c3c   #0a0b10   #848474   #3c3c3c     #3c3c3c
-client.unfocused        #3c3c3c   #0a0b10   #848474   #3c3c3c     #3c3c3c
-client.urgent           #2f343a   #900000   #ffffff   #900000
+client.focused          #cd3f45   #0a0b10   #848474   #cd3f45     #cd3f45
+client.focused_inactive #2c2e2f   #0a0b10   #848474   #2c2e2f     #2c2e2f
+client.unfocused        #2c2e2f   #0a0b10   #848474   #2c2e2f     #2c2e2f
+client.urgent           #e6cd69   #e6cd69   #ffffff   #e6cd69
 
 
 ## brightness
@@ -109,7 +109,7 @@ bindsym $mod+l exec i3lock-fancy -t ""
 
 
 ## mod key
-set $mod Mod1
+set $mod Mod4
 
 
 ## move window to workspace
@@ -192,9 +192,7 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 ## wallpaper/colours
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wp/red.png
-#exec_always --no-startup-id wal -b 111111 -g -n -i ~/Pictures/wp/adtr.png
-#exec_always --no-startup-id wal -g -i ~/Pictures/wp/grey.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wp/seti/black.png
 
 
 ## window split direction
