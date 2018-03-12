@@ -19,10 +19,10 @@
 [colours]
 
 ; dark
-background = ${xrdb:color0}
-background-alt = #2c2e2f
-foreground = ${xrdb:color7}
-primary = ${xrdb:color2}
+background = #212324
+background-alt = #2C2E2F
+foreground = #d0d0d0
+primary = ${xrdb:color1}
 ; end
 
 ; light
@@ -34,7 +34,7 @@ primary = ${xrdb:color2}
 
 
 secondary = #bf5f4d
-alert = #CA2C2C
+alert = ${xrdb:color3}
 
 ;=====================================================
 
@@ -208,7 +208,7 @@ date-alt = %d.%m.%Y
 time-alt = %H:%M
 
 format =   <label>
-format-foreground = ${colours.foreground} 
+format-foreground = ${colours.foreground}
 
 ;=====================================================
 
