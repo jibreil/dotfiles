@@ -12,7 +12,6 @@
 #
 #####################################################
 
-test
 
 ## bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
