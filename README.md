@@ -13,3 +13,18 @@
  \__,_/   \____/ \__/  /_/     /_/   /_/   \___/ /____/  
 
 ```
+
+# Setup
+
+* **bar:** [polybar](https://github.com/jaagr/polybar)
+* **colour scheme:** [base16-seti](https://github.com/chriskempson/base16-xresources/blob/master/xresources/base16-seti-256.Xresources)
+* **font:** [scientifica](https://github.com/NerdyPepper/scientifica) (text) + [siji](https://github.com/stark/siji) (icons)
+* **launcher:** [rofi](https://github.com/DaveDavenport/rofi)
+* **locker:** [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
+* **music:** [mopidy](https://www.mopidy.com/) + ncmpcpp
+* **os:** arch
+* **screenshot tool:** [nougat](https://github.com/Sweets/nougat)
+* **shell:** zsh [(oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh))
+* **terminal:** urxvt
+* **text editor:** neovim
+* **wm:** [i3-gaps](https://github.com/Airblader/i3)
