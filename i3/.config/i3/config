@@ -169,6 +169,7 @@ bindsym $mod+Ctrl+s exec nougat -fucst
 bindsym $mod+Shift+f exec nougat -ucs
 bindsym $mod+Ctrl+f exec nougat -ucst
 
+
 ## suspend
 bindsym $mod+s exec i3lock-fancy -t "" & systemctl suspend
 
