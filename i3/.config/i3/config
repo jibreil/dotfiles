@@ -22,6 +22,7 @@ for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 3
 for_window [class="mpv"] border pixel 3
 
+
 # class                 border    bg        text      indicator   child_border
 client.focused          #cd3f45   #0a0b10   #848474   #cd3f45     #cd3f45
 client.focused_inactive #2c2e2f   #0a0b10   #848474   #2c2e2f     #2c2e2f
