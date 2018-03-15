@@ -23,16 +23,17 @@ for_window [class="URxvt"] border pixel 3
 for_window [class="mpv"] border pixel 3
 
 
-# class                 border    bg        text      indicator   child_border
-client.focused          #cd3f45   #0a0b10   #848474   #cd3f45     #cd3f45
-client.focused_inactive #2c2e2f   #0a0b10   #848474   #2c2e2f     #2c2e2f
-client.unfocused        #2c2e2f   #0a0b10   #848474   #2c2e2f     #2c2e2f
-client.urgent           #e6cd69   #e6cd69   #ffffff   #e6cd69
-
-
 ## brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+
+## colours
+# class                 border    bg        text      indicator   child_border
+client.focused          #cd3f45   #151718   #d0d0d0   #cd3f45     #cd3f45
+client.focused_inactive #2c2e2f   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.unfocused        #2c2e2f   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.urgent           #e6cd69   #151718   #d0d0d0   #e6cd69
 
 
 ## compton
@@ -50,6 +51,10 @@ bindsym $mod+Right focus right
 floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+
+
+## font
+font pango:scientifica 8
 
 
 ## gaps
@@ -186,7 +191,7 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 ## wallpaper/colours
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wp/seti/black.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wp/seti/black.png
 
 
 ## window split direction
