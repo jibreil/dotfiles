@@ -13,6 +13,7 @@ alias clock='tty-clock -scD -C 1'
 alias n='nvim'
 alias please='sudo'
 alias q='exit'
+alias r='ranger'
 
 # Set default editor
 
