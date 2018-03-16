@@ -8,9 +8,10 @@ pullall() {
     find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 }
 
-alias please='sudo'
-alias n='nvim'
 alias c='clear'
+alias clock='tty-clock -scD -C 1'
+alias n='nvim'
+alias please='sudo'
 alias q='exit'
 
 # Set default editor
@@ -20,6 +21,10 @@ export EDITOR="nvim"
 # Set nougat directory
 
 export NOUGAT_SCREENSHOT_DIRECTORY=/home/jibreil/pictures/screenshots
+
+# Set path
+
+export PATH=$PATH:/home/jibreil/bin
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
