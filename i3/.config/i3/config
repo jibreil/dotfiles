@@ -47,6 +47,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 
+## dunst
+exec --no-startup-id dunst
+
+
 ## floating windows
 floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
