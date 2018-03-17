@@ -48,7 +48,7 @@ bindsym $mod+Right focus right
 
 
 ## dunst
-exec --no-startup-id dunst
+exec_always --no-startup-id ~/.config/dunst/launch.sh
 
 
 ## floating windows
