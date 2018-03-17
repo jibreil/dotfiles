@@ -172,15 +172,20 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 
 
-## screenshot
-bindsym $mod+Shift+s exec nougat -fucs
-bindsym $mod+Ctrl+s exec nougat -fucst
-bindsym $mod+Shift+f exec nougat -ucs
-bindsym $mod+Ctrl+f exec nougat -ucst
+## screenshot (nougat)
+#bindsym $mod+Shift+s exec nougat -fucs
+#bindsym $mod+Ctrl+s exec nougat -fucst
+#bindsym $mod+Shift+f exec nougat -ucs
+#bindsym $mod+Ctrl+f exec nougat -ucst
+
+bindsym $mod+Shift+s exec nougat -fucs && notify-send "screenshot" "fullscreen saved to disk"
+bindsym $mod+Ctrl+s exec nougat -fucst && notify-send "screenshot" "fullscreen copied to clipboard"
+bindsym $mod+Shift+f exec nougat -ucs && notify-send "screenshot" "area saved to disk"
+bindsym $mod+Ctrl+f exec nougat -ucst && notify-send "screenshot" "area copied to clipboard"
 
 
 ## suspend
-bindsym $mod+s exec i3lock-fancy -t "" & systemctl suspend
+bindsym $mod+s exec i3lock-fancy -t "" && systemctl suspend
 
 
 ## URxvt
