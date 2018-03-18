@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import sys
+
+output = list()
+text = ' '.join(sys.argv[1:])
+
+def discordbullshit(text, clap=False, b=False):
+    words = list()
+
+    if clap:
+        words.append(':clap:')
+
+    for word in text:
+        new_word = list()
+        for letter in word:
+            if letter.isalpha():
+                letter = letter.lower()
+                if b:
+                    if letter == 'b':
+                        new_word.append(':b:')
+                    else:
+                        new_word.append(f':regional_indicator_{letter}:')
+                else:
+                    new_word.append(f':regional_indicator_{letter}:')
+            else:
+                new_word.append(letter)
+        if clap:
+            new_word.append(':clap:')
+
+        words.append(' '.join(new_word))
+
+    return ' '.join(words)
+
+print(discordbullshit(sys.argv[1:], clap=True, b=True))
