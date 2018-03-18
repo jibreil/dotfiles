@@ -21,6 +21,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 3
 for_window [class="mpv"] border pixel 3
+for_window [class="Zathura"] border pixel 3
 
 
 ## brightness
