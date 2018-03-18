@@ -16,9 +16,11 @@ saveourship(){
    echo -e  " -c - Puts the screenshot into your clipboard\n"
    echo -e  " -u - Hide cursor. (maim backend ONLY, see -b)"
    echo     " -b - Select backend to use"
-   echo -e  "              Supported backends are \`maim', \`scrot', and \`imagemagick'."
+   echo -e  "              Supported backends are \`maim', \`scrot', \`imagemagick', and \`tty'."
    echo -e  "              nougat will detect available backends if -b"
    echo -e  "              is not specified. nougat prefers maim to scrot.\n"
+   echo -e  "              If the user is not in an X session, nougat will screenshot\n"
+   echo     "              the TTY."
    echo     " -p - Cleans the \`all' subdirectory of $NOUGAT_SCREENSHOT_DIRECTORY."
    echo     "              Particularly useful as it cleans any links that no"
    echo -e  "              longer point to a screenshot (i.e. deleted screeenshot).\n"
@@ -128,6 +130,12 @@ imagemagickbackend(){
 
 }
 
+ttybackend(){
+
+    command ffmpeg -f fbdev -framerate 1 -i /dev/fb0 -frames:v 1 /tmp/nougat_temp.png
+
+}
+
 runbackend(){
 
     if [[ "$backend" == "" ]]
@@ -166,6 +174,9 @@ runbackend(){
             ;;
         imagemagick)
             imagemagickbackend
+            ;;
+        tty)
+            ttybackend
             ;;
     esac
 
@@ -220,7 +231,7 @@ screenshotpls(){
 
         mv /tmp/nougat_temp.png /tmp/$name
 
-        echo "/tmp/${name}"
+        [[ "$silent" == "false" ]] && echo "/tmp/${name}"
         exit 0
 
     fi
