@@ -242,7 +242,7 @@ organize(){
         [[ "${silent}" == 'false' ]] && \
             echo "/tmp/${linkname}.png"
         mv /tmp/nougat_temp.png "/tmp/${linkname}.png"
-        return
+        exit 0
     fi
 
     mkdir -p "$fullpath"
@@ -253,6 +253,7 @@ organize(){
 
     [[ "${silent}" == 'false' ]] && \
         echo "$fullpath/$filename.png"
+    exit 0
 
 }
 
