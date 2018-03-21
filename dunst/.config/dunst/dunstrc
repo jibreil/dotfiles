@@ -6,7 +6,7 @@
     alignment = center
     bounce_freq = 0
     show_age_threshold = 60
-    word_wrap = yes
+    word_wrap = no
     ignore_newline = no
     geometry = "200x5-40+5"
     transparency = 0
