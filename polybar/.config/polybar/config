@@ -19,8 +19,8 @@
 [colours]
 
 ; dark
-background = #212324
-background-alt = #2C2E2F
+background = ${xrdb:color0}
+background-alt = #1B1D1E
 foreground = #d0d0d0
 primary = ${xrdb:color1}
 ; end
