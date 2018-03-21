@@ -8,20 +8,22 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "200x5-40+40"
-    transparency = 10
+    geometry = "200x5-40+5"
+    transparency = 0
     idle_threshold = 120
     monitor = 0
     follow = mouse
     sticky_history = yes
     line_height = 5
-    separator_height = 2
+    separator_height = 1
     padding = 8
     horizontal_padding = 8
     separator_color = frame
     startup_notification = false
-    frame_width = 3
+    frame_width = 0
     frame_color = "#cd3f45"
+    icon_position = left
+    max_icon_size = 32
 
 [shortcuts]
     close = ctrl+space
@@ -41,5 +43,5 @@
 
 [urgency_critical]
     background = "#151718"
-    foreground = "#BDBDBD"
+    foreground = "#cd3f45"
     timeout = 0
