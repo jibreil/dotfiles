@@ -19,9 +19,9 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ## borders
 for_window [class=".*"] border pixel 0
-for_window [class="URxvt"] border pixel 3
-for_window [class="mpv"] border pixel 3
-for_window [class="Zathura"] border pixel 3
+for_window [class="URxvt"] border pixel 0
+for_window [class="mpv"] border pixel 0
+for_window [class="Zathura"] border pixel 0
 
 
 ## brightness
@@ -31,10 +31,10 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 ## colours
 # class                 border    bg        text      indicator   child_border
-client.focused          #cd3f45   #151718   #d0d0d0   #cd3f45     #cd3f45
-client.focused_inactive #2c2e2f   #151718   #d0d0d0   #2c2e2f     #2c2e2f
-client.unfocused        #2c2e2f   #151718   #d0d0d0   #2c2e2f     #2c2e2f
-client.urgent           #e6cd69   #151718   #d0d0d0   #e6cd69
+client.focused          #151718   #151718   #cd3f45   #cd3f45     #cd3f45
+client.focused_inactive #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.unfocused        #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.urgent           #151718   #151718   #e6cd69   #e6cd69
 
 
 ## compton
@@ -196,7 +196,10 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 ## wallpaper/colours
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/pictures/wp/seti/black.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wp/dark.png
+
+## window titles
+for_window [class=".*"] title_format "  %title"
 
 
 ## window split direction
