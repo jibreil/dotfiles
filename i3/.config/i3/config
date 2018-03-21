@@ -174,10 +174,10 @@ bindsym $mod+w exec rofi -show window
 
 
 ## screenshot (nougat)
-bindsym $mod+Shift+s exec nougat -fcs && notify-send "took a screenshot" "fullscreen saved to disk"
-bindsym $mod+Ctrl+s exec nougat -fcst && notify-send "took a screenshot" "fullscreen copied to clipboard"
-bindsym $mod+Shift+f exec nougat -cs && notify-send "took a screenshot" "area saved to disk"
-bindsym $mod+Ctrl+f exec nougat -cst && notify-send "took a screenshot" "area copied to clipboard"
+bindsym $mod+Print exec nougat -fcs && notify-send "took a screenshot" "fullscreen saved to disk"
+bindsym Print exec nougat -fcst && notify-send "took a screenshot" "fullscreen copied to clipboard"
+bindsym $mod+Shift+Print exec nougat -cs && notify-send "took a screenshot" "area saved to disk"
+bindsym Shift+Print exec nougat -cst && notify-send "took a screenshot" "area copied to clipboard"
 
 
 ## suspend
