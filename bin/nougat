@@ -253,23 +253,22 @@ organize(){
 
     [[ "${silent}" == 'false' ]] && \
         echo "$fullpath/$filename.png"
-    exit 0
 
+    exit 0
 }
 
 clean(){
-    [[ -f '/tmp/nougat_temp.png' ]] && rm /tmp/nougat_temp.png
-
     source ~/.config/nougat
 
     linkdir=`dirname "${NOUGAT_SCREENSHOT_DIRECTORY}/${NOUGAT_LINKING_POLICY}"`
+    echo "$linkdir"
 
-    for file in "${linkdir}/*"
+    for file in "${linkdir}/"*
     do
 
         link=`readlink -f "$file"`
 
-        [[ ! -f "$link" ]] && rm $file
+        [[ ! -f "$link" ]] && rm "$file"
 
     done
 }
