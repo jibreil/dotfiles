@@ -8,9 +8,11 @@ pullall() {
     find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 }
 
+alias arch='neofetch -L'
 alias c='clear'
 alias clock='tty-clock -scD -C 1'
 alias n='nvim'
+alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
@@ -18,10 +20,6 @@ alias r='ranger'
 # Set default editor
 
 export EDITOR="nvim"
-
-# Set nougat directory
-
-export NOUGAT_SCREENSHOT_DIRECTORY=/home/jibreil/pictures/screenshots
 
 # Set path
 
