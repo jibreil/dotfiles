@@ -16,6 +16,7 @@ alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
+alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
 # Set default editor
 
