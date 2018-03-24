@@ -41,10 +41,13 @@ clean: polybar, wallpaper is `/wp/dark.png` - solid colour `#212324`
 neofetch
 
 ![](screenshots/4.png)
-busy: neovim, cava, ranger, tty-clock
+music: ncmpcpp, cava, bum
 
 ![](screenshots/5.png)
-rtv
+busy: neovim, cava, ranger, tty-clock
 
 ![](screenshots/6.png)
+rtv
+
+![](screenshots/7.png)
 google chrome with [this startpage](https://chrome.google.com/webstore/detail/bwnt-new-tab/doiinciigjmmlnbehjjjkeoamihggkba) and same background as the wallpaper
