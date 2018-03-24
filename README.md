@@ -28,3 +28,23 @@
 * **terminal:** urxvt
 * **text editor:** neovim
 * **wm:** [i3-gaps](https://github.com/Airblader/i3)
+
+# Screenshots
+
+![](screenshots/1.png)
+fun: colourblocks, bonsai, ghosts, nerdy, pipes, invaders, panes (all in `/bin`)
+
+![](screenshots/2.png)
+clean: polybar, wallpaper is `/wp/dark.png` - solid colour `#212324`
+
+![](screenshots/3.png)
+neofetch
+
+![](screenshots/4.png)
+busy: neovim, cava, ranger, tty-clock
+
+![](screenshots/5.png)
+rtv
+
+![](screenshots/6.png)
+google chrome with [this startpage](https://chrome.google.com/webstore/detail/bwnt-new-tab/doiinciigjmmlnbehjjjkeoamihggkba) and same background as the wallpaper
