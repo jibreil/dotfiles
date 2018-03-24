@@ -78,6 +78,9 @@ call plug#begin('~/.vim/plugged')
 " Plugin list
 Plug 'junegunn/goyo.vim'
 Plug 'DougBeney/pickachu'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 " End list
 call plug#end()
@@ -90,7 +93,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<cr>
 
 "=====================================================
 
