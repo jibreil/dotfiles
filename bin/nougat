@@ -41,7 +41,7 @@ maimbackend(){
     maimopts=''
 
     [[ "${fullscreen}" == 'false' ]] && maimopts='-s'
-    maimopts="${maimopts} -u"
+    maimopts="${maimopts} --hidecursor"
 
     command maim ${maimopts} /tmp/nougat_temp.png
 }
@@ -98,6 +98,19 @@ require(){
     fi
 }
 
+getconfigdir(){
+
+    CONFIG_DIR="$XDG_CONFIG_HOME"
+
+    if [[ ! -d "$CONFIG_DIR" ]]
+    then
+        CONFIG_DIR="$HOME/.config"
+    fi
+
+    echo "$CONFIG_DIR"
+
+}
+
 getcanonicals(){
 
     read year month day hour minute second <<< `date +'%Y %B %d %H %M %S'`
@@ -108,7 +121,7 @@ getcanonicals(){
         suffix='_full'
     fi
 
-    source "$HOME/.config/nougat"
+    source "`getconfigdir`/nougat"
 
     ORG_FULLPATH="${NOUGAT_SCREENSHOT_DIRECTORY}/${NOUGAT_ORGANIZATION_POLICY}"
     LINK_FULLPATH="${NOUGAT_SCREENSHOT_DIRECTORY}/${NOUGAT_LINKING_POLICY}"
@@ -121,19 +134,22 @@ getcanonicals(){
 }
 
 init() {
-    if [[ ! -f "$HOME/.config/nougat" ]]
+
+    CONFIG_DIR=`getconfigdir`
+
+    if [[ ! -f "$CONFIG_DIR/nougat" ]]
     then
-        mkdir -p "$HOME/.config"
+        mkdir -p "$CONFIG_DIR"
 
         if [[ "${NOUGAT_SCREENSHOT_DIRECTORY}" != '' ]]
         then
             # Support for V1 configurations
-            echo 'NOUGAT_SCREENSHOT_DIRECTORY="'"${NOUGAT_SCREENSHOT_DIRECTORY}"'"' > "$HOME/.config/nougat"
+            echo 'NOUGAT_SCREENSHOT_DIRECTORY="'"${NOUGAT_SCREENSHOT_DIRECTORY}"'"' > "$CONFIG_DIR/nougat"
         else
-            echo 'NOUGAT_SCREENSHOT_DIRECTORY="$HOME/Screenshots"' > "$HOME/.config/nougat"
+            echo 'NOUGAT_SCREENSHOT_DIRECTORY="$HOME/Screenshots"' > "$CONFIG_DIR/nougat"
         fi
 
-        cat >> "$HOME/.config/nougat" << EOF
+        cat >> "$CONFIG_DIR/nougat" << EOF
 NOUGAT_ORGANIZATION_POLICY="\${year}/\${month}/\${day}/\${hour}:\${minute}:\${second}\${suffix}"
 NOUGAT_LINKING_POLICY="All/\${year}-\${month}-\${day}.\${hour}:\${minute}:\${second}\${suffix}"
 EOF

@@ -27,7 +27,7 @@ fi
 
 [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] && exit 1
 
-notify-send -t 2000 "Recording" "started"
+notify-send -t 2000 "recording started"
 
 ffmpeg -y -f x11grab -draw_mouse 0 -s ${3}x${4} \
     -r 30 -i :0.0+${1},${2} -qscale 0 \
