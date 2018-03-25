@@ -109,6 +109,13 @@ bindsym $mod+t layout toggle
 bindsym $mod+l exec i3lock-fancy -t ""
 
 
+## media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
+
+
 ## mod key
 set $mod Mod4
 
