@@ -10,8 +10,9 @@ pullall() {
 
 alias arch='neofetch -L'
 alias c='clear'
-alias clock='tty-clock -scD -C 2'
+alias clock='tty-clock -scD -C 1'
 alias n='nvim'
+alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
