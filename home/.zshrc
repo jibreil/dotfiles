@@ -10,9 +10,8 @@ pullall() {
 
 alias arch='neofetch -L'
 alias c='clear'
-alias clock='tty-clock -scD -C 1'
+alias clock='tty-clock -scD -C 2'
 alias n='nvim'
-alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
@@ -114,5 +113,5 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+#BASE16_SHELL=$HOME/.config/base16-shell/
+#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
