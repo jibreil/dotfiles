@@ -22,7 +22,7 @@
 background = ${xrdb:color0}
 background-alt = #1B1D1E
 foreground = #d0d0d0
-primary = ${xrdb:color1}
+primary = ${xrdb:color2}
 ; end
 
 ; light
@@ -266,7 +266,9 @@ label = RAM %percentage_used%%
 
 [module/mpd]
 type = internal/mpd
-format-online =  <label-song> <icon-prev> <toggle> <icon-next>
+format-playing =  <label-song> <icon-prev> <toggle> <icon-next>
+format-paused =  <label-song> <icon-prev> <toggle> <icon-next>
+format-stopped = 
 
 label-song = %artist% - %title%
 label-song-maxlen = 25

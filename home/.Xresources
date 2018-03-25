@@ -21,25 +21,25 @@ rofi.font: scientifica Regular 8
 rofi.terminal: urxvt
 rofi.ssh-client: ssh
 
-! Base16 Seti UI
-! Scheme: 
+! Base16 Flat
+! Scheme: Chris Kempson (http://chriskempson.com)
 
 #define base00 #151718
-#define base01 #282a2b
-#define base02 #3b758c
-#define base03 #41535b
-#define base04 #43a5d5
-#define base05 #d6d6d6
-#define base06 #eeeeee
-#define base07 #ffffff
-#define base08 #cd3f45
-#define base09 #db7b55
-#define base0A #e6cd69
-#define base0B #9fca56
-#define base0C #55dbbe
-#define base0D #55b5db
-#define base0E #a074c4
-#define base0F #8a553f
+#define base01 #34495e
+#define base02 #7f8c8d
+#define base03 #95a5a6
+#define base04 #bdc3c7
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ecf0f1
+#define base08 #e74c3c
+#define base09 #e67e22
+#define base0A #f2d038
+#define base0B #2ecc71
+#define base0C #1abc9c
+#define base0D #3498db
+#define base0E #9b59b6
+#define base0F #be643c
 
 *foreground:   base05
 #ifdef background_opacity
