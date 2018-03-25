@@ -80,7 +80,7 @@ font-2 = Scientifica:size=8;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
-modules-left = i3 mpd
+modules-left = i3 mpd spotify
 modules-center = xwindow
 modules-right = xkeyboard wlan volume backlight-acpi battery date
 
@@ -312,6 +312,19 @@ label-connected =  eth: %essid%
 format-disconnected = <label-disconnected>
 label-disconnected =  eth: dc
 ;label-disconnected =  eth: dc
+
+;=====================================================
+
+[module/spotify]
+type = custom/script
+exec = spotify-playing
+interval = 1
+
+format =  <label>
+label-maxlen = 25
+label-ellipsis = true
+
+click-left = playerctl play-pause
 
 ;=====================================================
 
