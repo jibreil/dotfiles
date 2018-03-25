@@ -268,7 +268,7 @@ label = RAM %percentage_used%%
 type = internal/mpd
 format-online =  <label-song> <icon-prev> <toggle> <icon-next>
 
-label-song = %title% - %artist%
+label-song = %artist% - %title%
 label-song-maxlen = 25
 label-song-ellipsis = true
 
@@ -317,7 +317,7 @@ label-disconnected =  eth: dc
 
 [module/spotify]
 type = custom/script
-exec = spotify-playing
+exec = playerctl status &> /dev/null && echo "$(playerctl metadata artist) - $(playerctl metadata title)" || echo ""
 interval = 1
 
 format =  <label>
