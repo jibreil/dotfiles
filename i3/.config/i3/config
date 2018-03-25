@@ -34,7 +34,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 client.focused          #151718   #151718   #2ecc71   #2ecc71     #2ecc71
 client.focused_inactive #212324   #212324   #d0d0d0   #2c2e2f     #2c2e2f
 client.unfocused        #212324   #212324   #d0d0d0   #2c2e2f     #2c2e2f
-client.urgent           #212324   #212324   #e6cd69   #e6cd69
+client.urgent           #212324   #212324   #e74c3c   #e74c3c
 
 
 ## compton
