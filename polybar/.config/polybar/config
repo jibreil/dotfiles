@@ -34,7 +34,7 @@ primary = ${xrdb:color1}
 
 
 secondary = #bf5f4d
-alert = ${xrdb:color1}
+alert = ${xrdb:color3}
 
 ;=====================================================
 
