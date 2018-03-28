@@ -50,5 +50,5 @@ def discordbullshit(text):
 
     return ' '.join(words)
 
-output = discordbullshit(sys.argv[1:])
+output = discordbullshit(input('trash: ').split(' '))
 os.system(f"echo {output} | xclip -selection clipboard")
