@@ -19,9 +19,9 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 ## borders
 for_window [class=".*"] border pixel 0
-for_window [class="URxvt"] border pixel 0
-for_window [class="mpv"] border pixel 0
-for_window [class="Zathura"] border pixel 0
+for_window [class="URxvt"] border pixel 3
+for_window [class="mpv"] border pixel 3
+for_window [class="Zathura"] border pixel 3
 
 
 ## brightness
@@ -106,7 +106,7 @@ bindsym $mod+t layout toggle
 
 
 ## lock
-bindsym $mod+l exec i3lock-fancy -t ""
+bindsym $mod+l exec i3lock-fancy -pt ""
 
 
 ## media controls
@@ -181,10 +181,10 @@ bindsym $mod+w exec rofi -show window
 
 
 ## screenshot (nougat)
-bindsym $mod+Shift+s exec nougat -fcs && notify-send "fullscreen screenshot saved"
-bindsym $mod+Ctrl+s exec nougat -fcst && notify-send "fullscreen screenshot copied"
-bindsym $mod+Shift+f exec nougat -cs && notify-send "area/window screenshot saved"
-bindsym $mod+Ctrl+f exec nougat -cst && notify-send "area/window screenshot copied"
+bindsym $mod+Ctrl+f exec nougat -fcs && notify-send "fullscreen screenshot saved"
+bindsym $mod+Shift+f exec nougat -fcst && notify-send "fullscreen screenshot copied"
+bindsym $mod+Ctrl+s exec nougat -cs && notify-send "area/window screenshot saved"
+bindsym $mod+Shift+s exec nougat -cst && notify-send "area/window screenshot copied"
 
 bindsym Print exec nougat -fcst && notify-send "fullscreen screenshot copied"
 bindsym $mod+Print exec nougat -fcs && notify-send "fullscreen screenshot saved"
