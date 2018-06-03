@@ -39,17 +39,17 @@ alert = ${xrdb:color3}
 ;=====================================================
 
 [sizes]
-bar-width = 1326
-bar-height = 32
+bar-width = 2520
+bar-height = 36
 
 bar-offset-x = 40
-bar-top-gap = 20
-bar-bottom-gap = 20
+bar-top-gap = 30
+bar-bottom-gap = 30
 
 ;=====================================================
 
 [bar/example]
-monitor = eDP-1
+monitor = HDMI-2
 bottom = true
 fixed-center = true
 width = ${sizes.bar-width}
@@ -76,7 +76,7 @@ module-margin-right = 3
 
 font-0 = WunconSiji
 font-1 = FontAwesome:size=8;0
-font-2 = Scientifica:size=8;0
+font-2 = Curie:size=8;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 

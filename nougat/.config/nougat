@@ -1,3 +1,3 @@
 NOUGAT_SCREENSHOT_DIRECTORY="/home/jibreil/pictures/screenshots"
 NOUGAT_ORGANIZATION_POLICY="${year}/${month}/${day}/${hour}:${minute}:${second}${suffix}"
-NOUGAT_LINKING_POLICY="All/${year}-${month}-${day}.${hour}:${minute}:${second}${suffix}"
+NOUGAT_LINKING_POLICY="all/${year}-${month}-${day}.${hour}:${minute}:${second}${suffix}"
