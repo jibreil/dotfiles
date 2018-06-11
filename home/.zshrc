@@ -12,7 +12,7 @@ alias arch='neofetch -L'
 alias c='clear'
 alias clock='tty-clock -scD -C 1'
 alias n='nvim'
-#alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
+alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
@@ -37,7 +37,7 @@ export ZSH=/home/jibreil/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jibreil"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
