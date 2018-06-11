@@ -9,8 +9,15 @@ Xft.lcdfilter: lcddefault
 ! URxvt
 !URxvt.font: xft:scientifica:size=8
 !URxvt.boldFont: xft:scientifica:size=8
-URxvt.font:xft:curie:size=8
-URxvt.boldFont:xft:curie:size=8
+
+!URxvt.font:xft:curie:size=8
+!URxvt.boldFont:xft:curie:size=8
+
+URxvt.font: xft:Iosevka Term:style=medium:size=12
+URxvt.boldFont: xft:Iosevka Term:style=bold:size=12
+URxvt.italicFont: xft:Iosevka Term:style=italic:size=12
+URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=12
+
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: 1
 URxvt.letterSpace: 0
@@ -19,7 +26,7 @@ URxvt.externalBorder: 0
 URxvt.internalBorder: 40
 
 ! rofi
-rofi.font: scientifica Regular 8
+rofi.font: Iosevka Term Regular 12
 rofi.terminal: urxvt
 rofi.ssh-client: ssh
 

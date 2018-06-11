@@ -11,7 +11,7 @@
 "    / ___/___   ___   / _/(_)___ _
 "   / /__ / _ \ / _ \ / _// // _ `/
 "   \___/ \___//_//_//_/ /_/ \_, /
-"                            /___/
+"                           /___/
 "
 "=====================================================
 
@@ -52,6 +52,14 @@ set cmdheight=2
 
 "=====================================================
 
+" Nerdtree
+
+map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFocus<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"=====================================================
+
 " No wrapping in the middle of a word
 
 set linebreak
@@ -81,6 +89,9 @@ Plug 'DougBeney/pickachu'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rhysd/open-pdf.vim'
 
 " End list
 call plug#end()
