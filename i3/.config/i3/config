@@ -180,6 +180,11 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 
 
+## scratchpad
+bindsym $mod+End move scratchpad
+bindsym $mod+Home scratchpad show
+
+
 ## screenshot (nougat)
 bindsym $mod+Ctrl+f exec nougat -fcs && notify-send "fullscreen screenshot saved"
 bindsym $mod+Shift+f exec nougat -fcst && notify-send "fullscreen screenshot copied"
