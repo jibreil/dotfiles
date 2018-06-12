@@ -36,6 +36,12 @@ augroup END
 
 "=====================================================
 
+" Hide end-of-file symbols
+
+hi EndOfBuffer ctermbg=black ctermfg=black guibg=black guifg=black
+
+"=====================================================
+
 " Indenting
 
 set autoindent
