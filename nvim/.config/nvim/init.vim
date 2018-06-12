@@ -3,10 +3,12 @@
 "     / //_/(_)___  ___ _ / /__ |_  | |_  |( )___
 "    / ,<  / // _ \/ _ `//  '_// __/ / __/ |/(_-<
 "   /_/|_|/_//_//_/\_, //_/\_\/____//____/  /___/
-"                 /___/     _
+"                 /___/
+"                           _
 "     ___  ___  ___  _  __ (_)__ _
 "    / _ \/ -_)/ _ \| |/ // //  ' \
 "   /_//_/\__/ \___/|___//_//_/_/_/
+"
 "     _____             ___ _
 "    / ___/___   ___   / _/(_)___ _
 "   / /__ / _ \ / _ \ / _// // _ `/
@@ -17,7 +19,7 @@
 
 " Always exit all files
 
-cnoreabbrev q qa
+" cnoreabbrev q qa
 
 "=====================================================
 
@@ -27,42 +29,41 @@ augroup General
 
     autocmd FileType markdown,text setlocal spell
 
-    autocmd BufReadPost * Goyo 90%x90%
+"    autocmd BufReadPost * Goyo 90%x90%
     autocmd VimResized * execute "normal \<C-W>="
 
 augroup END
 
 "=====================================================
 
-" Hide UI
+" Indenting
 
-set noshowmode
-set laststatus=0
-set shortmess=atI
-set cmdheight=2
+set autoindent
+set smartindent
+
+set shiftwidth=4
 
 "=====================================================
 
-" Map wasd as movement keys
+" Natural split
 
-" noremap w k
-" noremap a h
-" noremap s j
-" noremap d l
+set splitbelow
+set splitright
 
 "=====================================================
 
 " Nerdtree
 
-map <F2> :NERDTreeToggle<CR>
-map <F3> :NERDTreeFocus<CR>
+noremap <F10> :NERDTreeToggle<CR>
+noremap <F5> :NERDTreeFocus<CR>
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "=====================================================
 
-" No wrapping in the middle of a word
+" No backup file
 
-set linebreak
+set nobackup
 
 "=====================================================
 
@@ -81,19 +82,26 @@ let g:pickachu_default_date_format = "%d.%m.%Y"
 " Plugins
 
 " Plugin directory
+
 call plug#begin('~/.vim/plugged')
 
 " Plugin list
+
 Plug 'junegunn/goyo.vim'
+
 Plug 'DougBeney/pickachu'
-Plug 'google/vim-maktaba'
+
 Plug 'google/vim-codefmt'
+Plug 'google/vim-maktaba'
 Plug 'google/vim-glaive'
+
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'rhysd/open-pdf.vim'
 
 " End list
+
 call plug#end()
 
 "=====================================================
@@ -104,9 +112,17 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <esc> :noh<cr>
+
+nnoremap <esc> :noh<CR>
 
 "=====================================================
+
+" Set title of file as window title
+
+set title
+
+"=====================================================
+
 
 " Show existing tab with 4 spaces width
 
@@ -120,30 +136,34 @@ set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
 "=====================================================
 
-" Softwrapped lines keep indent level
-
-set breakindent
-
-"=====================================================
-
 " Spelling
 
 set spelllang=en_au
+
 hi SpellBad ctermbg=1 ctermfg=0
 
 "=====================================================
 
-" Use arrows to move between rows with soft wrapping
+" UI
+
+set cmdheight=2
+set laststatus=0
+set noshowmode
+set number
+set scrolloff=5
+set shortmess=atI
+set ttyfast
+
+"=====================================================
+
+" Wrapping
+
+set breakindent
+set linebreak
 
 nnoremap <down> gj
 nnoremap <up> gk
 vnoremap <down> gj
 vnoremap <up> gk
-
-"=====================================================
-
-" When indenting with '>', use 4 spaces width
-
-set shiftwidth=4
 
 "=====================================================
