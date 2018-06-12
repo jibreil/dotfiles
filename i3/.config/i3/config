@@ -14,22 +14,27 @@
 
 
 ## bar
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 ## borders
+
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 3
 for_window [class="mpv"] border pixel 3
 for_window [class="Zathura"] border pixel 3
+for_window [title="tty-clock -scD -C 1"] border pixel 5
 
 
 ## brightness
+
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 
 ## colours
+
 # class                 border    bg        text      indicator   child_border
 client.focused          #151718   #151718   #cd3f45   #cd3f45     #cd3f45
 client.focused_inactive #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
@@ -38,10 +43,12 @@ client.urgent           #151718   #151718   #e6cd69   #e6cd69
 
 
 ## compton
+
 exec --no-startup-id compton
 
 
 ## change window focus
+
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -49,20 +56,24 @@ bindsym $mod+Right focus right
 
 
 ## dunst
+
 exec_always --no-startup-id ~/.config/dunst/launch.sh
 
 
 ## floating windows
+
 floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 
 ## font
+
 font pango:scientifica 8
 
 
 ## gaps
+
 gaps inner 30
 gaps outer 10
 
@@ -97,19 +108,23 @@ mode "gaps_outer" {
 
 
 ## kill window
+
 bindsym $mod+Shift+q kill
 
 
 ## layout
+
 bindsym $mod+f fullscreen toggle
 bindsym $mod+t layout toggle
 
 
 ## lock
+
 bindsym $mod+l exec i3lock-fancy -t ""
 
 
 ## media controls
+
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -117,10 +132,12 @@ bindsym XF86AudioStop exec playerctl stop
 
 
 ## mod key
+
 set $mod Mod4
 
 
 ## move window to workspace
+
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -134,6 +151,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 
 ## move window to workspace and go to workspace
+
 bindsym $mod+Ctrl+1 move container to workspace 1; workspace 1
 bindsym $mod+Ctrl+2 move container to workspace 2; workspace 2
 bindsym $mod+Ctrl+3 move container to workspace 3; workspace 3
@@ -147,6 +165,7 @@ bindsym $mod+Ctrl+0 move container to workspace 10; workspace 10
 
 
 ## move window within workspace
+
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -154,16 +173,20 @@ bindsym $mod+Shift+Right move right
 
 
 ## reload/restart i3
+
 bindsym $mod+Shift+w reload
 bindsym $mod+Shift+r restart
 
 
 ## restart Mopidy
-bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart mopidy
+
+# bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart mopidy
 
 
 ## resize windows
+
 bindsym $mod+r mode "resize"
+
 mode "resize" {
   bindsym Up resize grow height
   bindsym Down resize shrink height
@@ -176,16 +199,19 @@ mode "resize" {
 
 
 ## rofi (replacing dmenu)
+
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
 
 
 ## scratchpad
+
 bindsym $mod+End move scratchpad
 bindsym $mod+Home scratchpad show
 
 
 ## screenshot (nougat)
+
 bindsym $mod+Ctrl+f exec nougat -fcs && notify-send "fullscreen screenshot saved"
 bindsym $mod+Shift+f exec nougat -fcst && notify-send "fullscreen screenshot copied"
 bindsym $mod+Ctrl+s exec nougat -cs && notify-send "area/window screenshot saved"
@@ -196,39 +222,47 @@ bindsym $mod+Print exec nougat -fcs && notify-send "fullscreen screenshot saved"
 
 
 ## suspend
+
 bindsym $mod+s exec i3lock-fancy -t "" && systemctl suspend
 
 
 ## URxvt
+
 bindsym $mod+Return exec urxvt --depth 32
 
 
 ## volume
+
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 
 ## wallpaper/colours
+
 exec_always --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id feh --bg-fill ~/pictures/wp/dark.png
 
 ## window titles
+
 for_window [class=".*"] title_format "  %title"
 
 
 ## window split direction
+
 bindsym $mod+h split h
 bindsym $mod+v split v
 
 
 ## workspace switching settings
+
 workspace_auto_back_and_forth yes
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 
 ## workspace switching
+
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
