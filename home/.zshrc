@@ -1,22 +1,20 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
-alias update='trizen -Syu'
-alias uninstall='trizen -Rns'
-
-alias pull='git pull'
-pullall() {
-    find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
-}
-
 alias arch='neofetch -L'
 alias c='clear'
-alias clock='tty-clock -scD -C 1'
+alias clock='tty-clock -scD -C 4'
+alias exa='exa --group-directories-first'
+alias exal='exa -lFh --group-directories-first'
 alias n='nvim'
-alias neofetch='neofetch --colors 1 7 7 1 1 7 --underline off --ascii_colors 1 1 1 1 1 1'
+alias neofetch='neofetch --colors 4 7 7 4 4 7 --underline off --ascii_colors 5 5 5 5 5 5'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
+
+pullall() {
+    find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
+}
 
 # Set default editor
 
