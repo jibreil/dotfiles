@@ -22,19 +22,19 @@
 background = ${xrdb:color0}
 background-alt = #1B1D1E
 foreground = #d0d0d0
-primary = ${xrdb:color1}
+primary = ${xrdb:color4}
 ; end
 
 ; light
 ;background = ${xrdb:color7}
 ;background-alt = #cccccc
 ;foreground = ${xrdb:color0}
-;primary = ${xrdb:color1}
+;primary = ${xrdb:color4}
 ; end
 
 
 secondary = #bf5f4d
-alert = ${xrdb:color3}
+alert = ${xrdb:color1}
 
 ;=====================================================
 
