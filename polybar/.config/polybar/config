@@ -40,7 +40,7 @@ alert = ${xrdb:color1}
 
 [sizes]
 bar-width = 2520
-bar-height = 36
+bar-height = 38
 
 bar-offset-x = 40
 bar-top-gap = 30
@@ -76,7 +76,7 @@ module-margin-right = 3
 
 font-0 = WunconSiji
 font-1 = FontAwesome:size=8;0
-font-2 = Curie:size=8;0
+font-2 = Iosevka:weight=medium:pixelsize=10;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
