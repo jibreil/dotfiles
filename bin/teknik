@@ -131,7 +131,7 @@ feedback() {
 
 	# Send notification
 	if [[ "$notify" == true ]]; then
-		notify-send "Upload complete: $url"
+		dunstify "Upload complete" "$url"
 	fi
 
 	echo "${url}"

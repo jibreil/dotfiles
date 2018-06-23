@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+speaker_mute="$(pactl list sinks | awk NR==9'{print $2}')"
+speaker_volume="$(pactl list sinks | awk NR==10'{print $5}')"
+
+if [ "${speaker_mute}" = 'yes' ]; then
+    status="Volume: ${speaker_volume} (Muted)"
+else
+    status="Volume: ${speaker_volume}"
+fi
+
+dunstify -r 13596705 "${status}"

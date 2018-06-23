@@ -233,9 +233,11 @@ bindsym $mod+Return exec urxvt --depth 32
 
 ## volume
 
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 2 && ~/bin/volume
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 2 && ~/bin/volume
+bindsym XF86AudioMute exec pulseaudio-ctl mute && ~/bin/volume
+
+bindsym $mod+c exec status
 
 
 ## wallpaper/colours

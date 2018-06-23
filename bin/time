@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+time="$(date +'%l:%M %p')"
+date="$(date +'%A %d %B %Y')"
+
+dunstify -r 13596706 "${time}, ${date}"
