@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+time-date && sleep 2.2 && volume && sleep 2.2 && wifi
