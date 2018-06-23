@@ -205,8 +205,6 @@ label = %time%, %date%
 date = %a %e %b
 time = %l:%M %p
 
-click-left = ~/bin/time
-
 format =  %{A1:~/bin/time-date:} <label> %{A}
 format-foreground = ${colours.foreground}
 
