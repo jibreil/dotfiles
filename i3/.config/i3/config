@@ -36,7 +36,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 ## colours
 
 # class                 border    bg        text      indicator   child_border
-client.focused          #151718   #151718   #55b5db   #55b5db     #55b5db
+client.focused          #151718   #151718   #55b5db   #9fca56     #9fca56
 client.focused_inactive #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.unfocused        #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.urgent           #151718   #151718   #e6cd69   #e6cd69
@@ -120,7 +120,7 @@ bindsym $mod+t layout toggle
 
 ## lock
 
-bindsym $mod+l exec i3lock-fancy -t ""
+bindsym $mod+l exec i3lock-fancy -pt ""
 
 
 ## media controls
@@ -223,7 +223,7 @@ bindsym $mod+Print exec nougat -fcs && dunstify "fullscreen screenshot saved"
 
 ## suspend
 
-bindsym $mod+s exec i3lock-fancy -t "" && systemctl suspend
+bindsym $mod+s exec i3lock-fancy -pt "" && systemctl suspend
 
 
 ## URxvt
@@ -243,7 +243,7 @@ bindsym $mod+c exec status
 ## wallpaper/colours
 
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/pictures/wp/dark.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wp/leaf.png
 
 ## window titles
 

@@ -21,8 +21,9 @@
 ; dark
 background = ${xrdb:color0}
 background-alt = #1B1D1E
-foreground = #d0d0d0
+foreground = #d6d6d6
 primary = ${xrdb:color4}
+green = ${xrdb:color2}
 ; end
 
 ; light
@@ -54,7 +55,7 @@ bottom = true
 fixed-center = true
 width = ${sizes.bar-width}
 height = ${sizes.bar-height}
-radius = 2.0
+radius = 3.0
 
 background = ${colours.background}
 foreground = ${colours.foreground}
@@ -82,7 +83,7 @@ font-4 = Kochi Gothic:size=8;0
 
 modules-left = i3 mpd spotify
 modules-center = xwindow
-modules-right = xkeyboard wlan volume backlight-acpi battery date
+modules-right = xkeyboard wlan volume battery date
 
 ;separator = |
 
@@ -126,6 +127,8 @@ inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
+format-foreground = ${colours.primary}
+
 ;=====================================================
 
 [module/xbacklight]
@@ -148,14 +151,15 @@ adapter = ADP0
 
 format-charging = <label-charging>
 format-charging-foreground = ${colours.primary}
-format-charging-underline = ${colours.primary}
+;format-charging-underline = ${colours.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colours.primary}
 ;format-discharging-underline = ${colours.primary}
 
 format-full = <label-full>
-format-full-foreground = ${colours.alert}
-format-full-underline = ${colours.alert}
+format-full-foreground = ${colours.primary}
+;format-full-underline = ${colours.alert}
 
 label-charging =  %percentage%%
 
@@ -202,11 +206,11 @@ interval = 1
 
 label = %time%, %date%
 
-date = %a %e %b
+date = %A %d %B
 time = %l:%M %p
 
 format =  %{A1:~/bin/time-date:} <label> %{A}
-format-foreground = ${colours.foreground}
+format-foreground = ${colours.green}
 
 ;=====================================================
 
@@ -231,16 +235,18 @@ wrapping-scroll = true
 
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-background = ${colours.background}
 
 label-focused = %name%
-label-focused-foreground = ${colours.foreground}
+;label-focused = "◆"
+label-focused-foreground = ${colours.green}
 label-focused-background = ${colours.background-alt}
-label-focused-underline = ${colours.primary}
+;label-focused-underline = ${colours.green}
 label-focused-padding = 4
 
 label-unfocused = %name%
+;label-unfocused = "◇"
 label-unfocused-padding = 4
+label-unfocused-foreground = ${colours.primary}
 
 label-visible = %name%
 label-visible-underline = ${colours.secondary}
@@ -266,7 +272,7 @@ label = RAM %percentage_used%%
 type = internal/mpd
 format-playing =  <label-song> <icon-prev> <toggle> <icon-next>
 format-paused =  <label-song> <icon-prev> <toggle> <icon-next>
-format-stopped = 
+format-stopped =
 
 label-song = %artist% - %title%
 label-song-maxlen = 25
@@ -298,6 +304,9 @@ format-disconnected = <label-disconnected>
 label-disconnected =  wifi: dc
 ;label-disconnected =  dc
 
+format-connected-foreground = ${colours.primary}
+format-disconnected-foreground = ${colours.primary}
+
 ;==========================
 
 [module/eth]
@@ -323,6 +332,8 @@ interval = 1
 format =  <label>
 label-maxlen = 25
 label-ellipsis = true
+
+format-foreground = ${colours.primary}
 
 click-left = playerctl play-pause
 
@@ -351,6 +362,9 @@ label-volume =  %percentage%%
 format-muted = <label-muted>
 label-muted =  mute
 
+format-volume-foreground = ${colours.green}
+format-muted-foreground = ${colours.green}
+
 ;=====================================================
 
 [module/xkeyboard]
@@ -360,8 +374,9 @@ blacklist-0 = num lock
 format = <label-indicator>
 
 label-indicator-padding = 3
-label-indicator-background = ${colours.primary}
+label-indicator-background = ${colours.green}
 label-indicator-foreground = ${colours.background}
+;label-indicator-foreground = ${colours.green}
 
 ;=====================================================
 
@@ -369,6 +384,8 @@ label-indicator-foreground = ${colours.background}
 type = internal/xwindow
 label = %title%
 label-maxlen = 60
+
+format-foreground = ${colours.green}
 
 ;=====================================================
 ;
