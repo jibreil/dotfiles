@@ -28,4 +28,6 @@
 * **text editor:** neovim
 * **wm:** [i3-gaps](https://github.com/Airblader/i3)
 
+# Screenshots
+
 ![](screenshot.png)
