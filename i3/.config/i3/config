@@ -35,11 +35,11 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 ## colours
 
-# class                 border    bg        text      indicator   child_border
-client.focused          #151718   #151718   #55b5db   #9fca56     #9fca56
-client.focused_inactive #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
-client.unfocused        #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
-client.urgent           #151718   #151718   #e6cd69   #e6cd69
+# class                  border    bg        text      indicator   child_border
+client.focused           #151718   #151718   #A074C4   #A074C4     #A074C4
+client.focused_inactive  #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.unfocused         #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
+client.urgent            #151718   #151718   #e6cd69   #e6cd69
 
 
 ## compton
@@ -69,7 +69,7 @@ bindsym $mod+space focus mode_toggle
 
 ## font
 
-font pango:scientifica 8
+font pango:iosevka 12
 
 
 ## gaps
@@ -243,7 +243,7 @@ bindsym $mod+c exec status
 ## wallpaper/colours
 
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/pictures/wp/leaf.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wp/seti/black.png
 
 ## window titles
 

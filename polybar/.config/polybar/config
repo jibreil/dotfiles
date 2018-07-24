@@ -23,7 +23,7 @@ background = ${xrdb:color0}
 background-alt = #1B1D1E
 foreground = #d6d6d6
 primary = ${xrdb:color4}
-green = ${xrdb:color2}
+purple = ${xrdb:color5}
 ; end
 
 ; light
@@ -76,7 +76,7 @@ module-margin-left = 2
 module-margin-right = 3
 
 font-0 = WunconSiji
-font-1 = FontAwesome:size=8;0
+font-1 = FontAwesome:size=12;0
 font-2 = Iosevka:weight=medium:pixelsize=12;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
@@ -161,16 +161,19 @@ format-full = <label-full>
 format-full-foreground = ${colours.primary}
 ;format-full-underline = ${colours.alert}
 
-label-charging =  %percentage%%
+label-charging =  %percentage%%
 
 label-discharging = %percentage%%
+label-discharging-foreground = ${colours.primary}
 
-label-full =  fully charged
+label-full =  fully charged
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colours.foreground}
+ramp-capacity-0 =  
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colours.primary}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -209,8 +212,8 @@ label = %time%, %date%
 date = %A %d %B
 time = %l:%M %p
 
-format =  %{A1:~/bin/time-date:} <label> %{A}
-format-foreground = ${colours.green}
+format = %{A1:~/bin/time-date:} <label> %{A}
+format-foreground = ${colours.primary}
 
 ;=====================================================
 
@@ -235,16 +238,17 @@ wrapping-scroll = true
 
 label-mode = %mode%
 label-mode-padding = 2
+label-mode-foreground = ${colours.purple}
 
-label-focused = %name%
-;label-focused = "◆"
-label-focused-foreground = ${colours.green}
-label-focused-background = ${colours.background-alt}
+;label-focused = %name%
+label-focused = ""
+label-focused-foreground = ${colours.purple}
+;label-focused-background = ${colours.background-alt}
 ;label-focused-underline = ${colours.green}
 label-focused-padding = 4
 
-label-unfocused = %name%
-;label-unfocused = "◇"
+;label-unfocused = %name%
+label-unfocused = ""
 label-unfocused-padding = 4
 label-unfocused-foreground = ${colours.primary}
 
@@ -252,9 +256,11 @@ label-visible = %name%
 label-visible-underline = ${colours.secondary}
 label-visible-padding = 4
 
-label-urgent = %name%
-;label-urgent-background = ${colours.alert}
-label-urgent-underline = ${colours.alert}
+;label-urgent = %name%
+label-urgent = ""
+;label-urgent-background = ${colours.purple}
+label-urgent-foreground = ${colours.purple}
+;label-urgent-underline = ${colours.alert}
 label-urgent-padding = 4
 
 ;=====================================================
@@ -297,15 +303,13 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
-;label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
-label-connected =  wifi: %essid%
+label-connected =  wifi: %essid%
 
 format-disconnected = <label-disconnected>
-label-disconnected =  wifi: dc
-;label-disconnected =  dc
+label-disconnected =  wifi: dc
 
 format-connected-foreground = ${colours.primary}
-format-disconnected-foreground = ${colours.primary}
+format-disconnected-foreground = ${colours.purple}
 
 ;==========================
 
@@ -357,13 +361,13 @@ label-warn = TEMP: %temperature%
 type = internal/volume
 
 format-volume = <label-volume>
-label-volume =  %percentage%%
+label-volume =  %percentage%%
 
 format-muted = <label-muted>
-label-muted =  mute
+label-muted =  mute
 
-format-volume-foreground = ${colours.green}
-format-muted-foreground = ${colours.green}
+format-volume-foreground = ${colours.primary}
+format-muted-foreground = ${colours.purple}
 
 ;=====================================================
 
@@ -374,9 +378,8 @@ blacklist-0 = num lock
 format = <label-indicator>
 
 label-indicator-padding = 3
-label-indicator-background = ${colours.green}
-label-indicator-foreground = ${colours.background}
-;label-indicator-foreground = ${colours.green}
+;label-indicator-background = ${colours.purple}
+label-indicator-foreground = ${colours.purple}
 
 ;=====================================================
 
@@ -385,7 +388,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 60
 
-format-foreground = ${colours.green}
+format-foreground = ${colours.purple}
 
 ;=====================================================
 ;
