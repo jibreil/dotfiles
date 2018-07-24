@@ -27,3 +27,5 @@
 * **terminal:** urxvt
 * **text editor:** neovim
 * **wm:** [i3-gaps](https://github.com/Airblader/i3)
+
+![](screenshot.png)
