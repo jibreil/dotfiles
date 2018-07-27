@@ -359,7 +359,7 @@ label-warn = TEMP: %temperature%
 ;=====================================================
 
 [module/volume]
-type = internal/pulseaudio
+type = internal/volume
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
