@@ -78,6 +78,7 @@ gaps inner 30
 gaps outer 10
 
 bindsym $mod+g mode "gaps"
+
 mode "gaps" {
   bindsym o mode "gaps_outer"
   bindsym i mode "gaps_inner"
@@ -233,9 +234,25 @@ bindsym $mod+Return exec urxvt --depth 32
 
 ## volume
 
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 2 && ~/bin/volume
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 2 && ~/bin/volume
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5 && ~/bin/volume
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5 && ~/bin/volume
 bindsym XF86AudioMute exec pulseaudio-ctl mute && ~/bin/volume
+
+bindsym $mod+slash mode "volume"
+
+mode "volume" {
+    bindsym plus exec --no-startup-id pulseaudio-ctl up 5 && ~/bin/volume
+    bindsym minus exec --no-startup-id pulseaudio-ctl down 5 && ~/bin/volume
+
+    bindsym Up exec --no-startup-id pulseaudio-ctl up 5 && ~/bin/volume
+    bindsym Down exec --no-startup-id pulseaudio-ctl down 5 && ~/bin/volume
+    
+    bindsym r exec --no-startup-id pulseaudio-ctl set 50 && ~/bin/volume
+    bindsym m exec --no-startup-id pulseaudio-ctl mute && ~/bin/volume
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 bindsym $mod+c exec status
 
