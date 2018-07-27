@@ -256,14 +256,15 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute && ~/bin/volume
 bindsym $mod+slash mode "volume"
 
 mode "volume" {
-    bindsym plus exec --no-startup-id pulseaudio-ctl up 5 && ~/bin/volume
-    bindsym minus exec --no-startup-id pulseaudio-ctl down 5 && ~/bin/volume
+    bindsym plus exec pulseaudio-ctl up && ~/bin/volume
+    bindsym minus exec pulseaudio-ctl down && ~/bin/volume
 
-    bindsym Up exec --no-startup-id pulseaudio-ctl up 5 && ~/bin/volume
-    bindsym Down exec --no-startup-id pulseaudio-ctl down 5 && ~/bin/volume
+    bindsym Up exec pulseaudio-ctl up && ~/bin/volume
+    bindsym Down exec pulseaudio-ctl down && ~/bin/volume
     
-    bindsym r exec --no-startup-id pulseaudio-ctl set 50 && ~/bin/volume
-    bindsym m exec --no-startup-id pulseaudio-ctl mute && ~/bin/volume
+    bindsym 0 exec pulseaudio-ctl set 1 && ~/bin/volume 
+    bindsym r exec pulseaudio-ctl set 50 && ~/bin/volume
+    bindsym m exec pulseaudio-ctl mute && ~/bin/volume
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
