@@ -137,9 +137,8 @@ type = internal/xbacklight
 format = <ramp> <label>
 label = %percentage%%
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
 
 ;=====================================================
 
@@ -147,10 +146,10 @@ ramp-2 = 
 type = internal/battery
 full-at = 100
 battery = BAT0
-adapter = ADP0
+adapter = AC0
 
 format-charging = <label-charging>
-format-charging-foreground = ${colours.primary}
+format-charging-foreground = ${colours.purple}
 ;format-charging-underline = ${colours.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -158,7 +157,7 @@ format-discharging-foreground = ${colours.primary}
 ;format-discharging-underline = ${colours.primary}
 
 format-full = <label-full>
-format-full-foreground = ${colours.primary}
+format-full-foreground = ${colours.purple}
 ;format-full-underline = ${colours.alert}
 
 label-charging =  %percentage%%
@@ -175,9 +174,11 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-foreground = ${colours.primary}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 =  
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = ${colours.primary}
 animation-charging-framerate = 1000
 
@@ -284,11 +285,11 @@ label-song = %artist% - %title%
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = 
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-next = 
 
 bar-progress-width = 20
 bar-progress-indicator = |
@@ -319,12 +320,12 @@ interface = enp2s0
 interval = 3.0
 
 format-connected = <label-connected>
-;label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
-label-connected =  eth: %essid%
+;label-connected =  %ifname%: %local_ip% on %essid%, %signal%%
+label-connected =  eth: %essid%
 
 format-disconnected = <label-disconnected>
-label-disconnected =  eth: dc
-;label-disconnected =  eth: dc
+label-disconnected =  eth: dc
+;label-disconnected =  eth: dc
 
 ;=====================================================
 
@@ -333,7 +334,7 @@ type = custom/script
 exec = playerctl status &> /dev/null && echo "$(playerctl metadata artist) - $(playerctl metadata title)" || echo ""
 interval = 1
 
-format =  <label>
+format =  <label>
 label-maxlen = 25
 label-ellipsis = true
 
@@ -358,7 +359,7 @@ label-warn = TEMP: %temperature%
 ;=====================================================
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
