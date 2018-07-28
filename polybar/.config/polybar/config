@@ -83,7 +83,7 @@ font-4 = Kochi Gothic:size=8;0
 
 modules-left = i3 mpd spotify
 modules-center = xwindow
-modules-right = xkeyboard wlan volume battery date
+modules-right = xkeyboard wlan backlight-acpi volume battery date
 
 ;separator = |
 
