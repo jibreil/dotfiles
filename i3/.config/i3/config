@@ -267,13 +267,13 @@ bindsym $mod+Home scratchpad show
 
 ## screenshot (nougat)
 
-bindsym $mod+Ctrl+f exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
-bindsym $mod+Shift+f exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
-bindsym $mod+Ctrl+s exec nougat --screenshot -cs && dunstify "area/window screenshot saved"
-bindsym $mod+Shift+s exec nougat --screenshot -cst && dunstify "area/window screenshot copied"
+bindsym $mod+Ctrl+f exec nougat -fcs && dunstify "fullscreen screenshot saved"
+bindsym $mod+Shift+f exec nougat -fcst && dunstify "fullscreen screenshot copied"
+bindsym $mod+Ctrl+s exec nougat -cs && dunstify "area/window screenshot saved"
+bindsym $mod+Shift+s exec nougat -cst && dunstify "area/window screenshot copied"
 
-bindsym Print exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
-bindsym $mod+Print exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
+bindsym Print exec nougat -fcst && dunstify "fullscreen screenshot copied"
+bindsym $mod+Print exec nougat -fcs && dunstify "fullscreen screenshot saved"
 
 
 ## suspend
