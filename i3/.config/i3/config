@@ -43,7 +43,7 @@ mode "brightness" {
 
     bindsym 1 exec sudo brightnessctl set 10% && sleep 0.1 && brightnessctl get
     bindsym 2 exec sudo brightnessctl set 20% && sleep 0.1 && brightnessctl get
-	bindsym 3 exec sudo brightnessctl set 30% && sleep 0.1 && brightnessctl get
+    bindsym 3 exec sudo brightnessctl set 30% && sleep 0.1 && brightnessctl get
     bindsym 4 exec sudo brightnessctl set 40% && sleep 0.1 && brightnessctl get
     bindsym 5 exec sudo brightnessctl set 50% && sleep 0.1 && brightnessctl get
     bindsym 6 exec sudo brightnessctl set 60% && sleep 0.1 && brightnessctl get
