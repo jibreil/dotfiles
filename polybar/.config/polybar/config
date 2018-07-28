@@ -148,7 +148,7 @@ full-at = 100
 battery = BAT0
 adapter = AC0
 
-format-charging = <label-charging>
+format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colours.purple}
 ;format-charging-underline = ${colours.primary}
 
@@ -158,9 +158,9 @@ format-discharging-foreground = ${colours.primary}
 
 format-full = <label-full>
 format-full-foreground = ${colours.purple}
-;format-full-underline = ${colours.alert}
 
-label-charging =  %percentage%%
+label-charging = %percentage%%
+label-charging-foreground = ${colours.purple}
 
 label-discharging = %percentage%%
 label-discharging-foreground = ${colours.primary}
@@ -179,8 +179,8 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colours.primary}
-animation-charging-framerate = 1000
+animation-charging-foreground = ${colours.purple}
+animation-charging-framerate = 250
 
 ;=====================================================
 
