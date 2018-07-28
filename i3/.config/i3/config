@@ -29,8 +29,32 @@ for_window [class="Zathura"] border pixel 3
 
 ## brightness
 
-bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10% && sleep 0.1 && brightnessctl get
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sleep 0.1 && brightnessctl get
+
+bindsym $mod+backslash mode "brightness"
+
+mode "brightness" {
+    bindsym plus exec sudo brightnessctl set +10% && sleep 0.1 && brightnessctl get
+    bindsym minus exec sudo brightnessctl set 10%- && sleep 0.1 && brightnessctl get
+
+    bindsym Up exec sudo brightnessctl set +10% && sleep 0.1 && brightnessctl get
+    bindsym Down exec sudo brightnessctl set 10%- && sleep 0.1 && brightnessctl get
+
+    bindsym 1 exec sudo brightnessctl set 10% && sleep 0.1 && brightnessctl get
+    bindsym 2 exec sudo brightnessctl set 20% && sleep 0.1 && brightnessctl get
+	bindsym 3 exec sudo brightnessctl set 30% && sleep 0.1 && brightnessctl get
+    bindsym 4 exec sudo brightnessctl set 40% && sleep 0.1 && brightnessctl get
+    bindsym 5 exec sudo brightnessctl set 50% && sleep 0.1 && brightnessctl get
+    bindsym 6 exec sudo brightnessctl set 60% && sleep 0.1 && brightnessctl get
+    bindsym 7 exec sudo brightnessctl set 70% && sleep 0.1 && brightnessctl get
+    bindsym 8 exec sudo brightnessctl set 80% && sleep 0.1 && brightnessctl get
+    bindsym 9 exec sudo brightnessctl set 90% && sleep 0.1 && brightnessctl get
+    bindsym 0 exec sudo brightnessctl set 100% && sleep 0.1 && brightnessctl get
+    
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 
 ## colours
