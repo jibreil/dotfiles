@@ -215,7 +215,7 @@ mode "reboot: [y]es or [n]o" {
     bindsym y exec systemctl reboot
     bindsym n mode "default"
 
-    bindsym Return systemctl reboot
+    bindsym Return exec systemctl reboot
     bindsym Escape mode "default"
 }
 
@@ -223,7 +223,7 @@ mode "shutdown: [y]es or [n]o" {
     bindsym y exec systemctl poweroff
     bindsym n mode "default"
 
-    bindsym Return systemctl poweroff
+    bindsym Return exec systemctl poweroff
     bindsym Escape mode "default"
 }
 
