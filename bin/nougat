@@ -131,11 +131,12 @@ save(){
     read -r filetype extension <<< "${mime}"
     IFS=$_IFS
     read -r fullpath filename linkpath linkname <<< `getcanonicalpaths "${1}" "${extension}" "${filetype}"`
+    [[ "${linkpath}" == "." ]] && linkpath=""
     mkdir -p "${fullpath}"
-    [[ -n "${linkpath}" ]] && mkdir -p "${linkpath}"
     cp "${2}" "${fullpath}/${filename}"
-    [[ -n "${linkpath}" ]] && ln -s "${fullpath}/${filename}" "${linkpath}/${linkname}"
-    echo "${fullpath}/${filename} ${linkpath}/${linkname}"
+    output="${fullpath}/${filename}"
+    [[ -n "${linkpath}" ]] && mkdir -p "${linkpath}" && ln -s "${fullpath}/${filename}" "${linkpath}/${linkname}" && output="${output} ${linkpath}/${linkname}"
+    echo "${output}"
 }
 copy(){
     require xclip
@@ -153,7 +154,8 @@ post(){
         output=`temporary "" "${1}"`
     else
         read -r filepath linkpath <<< `save "" "${1}"`
-        output="${filepath}\n${linkpath}"
+        output="${filepath}"
+        [[ -n "${linkpath}" ]] && output="${output}\n${linkpath}"
     fi
     if [[ "${silent}" == "false" ]]
     then
@@ -226,7 +228,7 @@ record_region(){
             geometry=`select_default`
             ;;
     esac
-    sleep 0.5
+    sleep 0.1
     [[ -z "${geometry}" ]] && exit 0
     read -r width height x y <<< ${geometry}
     ffmpeg -f x11grab -s ${width}x${height} -i :0.0+${x},${y} -vcodec libx264 -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
@@ -260,7 +262,7 @@ capture_region(){
             geometry=`select_default`
             ;;
     esac
-    sleep 0.5
+    sleep 0.1
     [[ -z "${geometry}" ]] && exit 0
     read -r width height x y <<< ${geometry}
     geometry="${width}x${height}+${x}+${y}"
