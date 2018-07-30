@@ -73,7 +73,7 @@ padding-left = 0
 padding-right = 5
 
 module-margin-left = 2
-module-margin-right = 3
+module-margin-right = 2
 
 font-0 = WunconSiji
 font-1 = FontAwesome:size=12;0
@@ -81,7 +81,7 @@ font-2 = Iosevka:weight=medium:pixelsize=12;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
-modules-left = i3 mpd spotify
+modules-left = i3 spotify
 modules-center = xwindow
 modules-right = xkeyboard wlan backlight-acpi volume battery date
 
@@ -208,12 +208,12 @@ ramp-load-7 = █
 type = internal/date
 interval = 1
 
-label = %time%, %date%
+label = %time%
 
-date = %A %d %B
-time = %l:%M %p
+time =  %l:%M %p
+time-alt =  %A, %e %B %Y
 
-format = %{A1:~/bin/time-date:} <label> %{A}
+format = %{A1:~/bin/time-date:}<label>%{A}
 format-foreground = ${colours.primary}
 
 ;=====================================================
