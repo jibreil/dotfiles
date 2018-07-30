@@ -2,11 +2,11 @@
 
 alias arch='neofetch -L'
 alias c='clear'
-alias clock='tty-clock -scD -C 2'
+alias clock='tty-clock -scD -C 5'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
 alias n='nvim'
-alias neofetch='neofetch --colors 2 7 7 2 2 7 --underline off --ascii_colors 2 2 2 2 2 2'
+alias neofetch='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
