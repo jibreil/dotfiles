@@ -19,7 +19,7 @@
 
 " Always exit all files
 
-" cnoreabbrev q qa
+cnoreabbrev q qa
 
 "=====================================================
 
@@ -76,6 +76,8 @@ set nobackup
 " On pressing tab, insert 4 spaces
 
 set expandtab
+set tabstop=4
+set shiftwidth=4
 
 "=====================================================
 
