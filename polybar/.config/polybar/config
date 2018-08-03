@@ -24,6 +24,7 @@ background-alt = #1B1D1E
 foreground = #d6d6d6
 primary = ${xrdb:color4}
 purple = ${xrdb:color5}
+alert = ${xrdb:color1}
 ; end
 
 ; light
@@ -35,7 +36,6 @@ purple = ${xrdb:color5}
 
 
 secondary = #bf5f4d
-alert = ${xrdb:color1}
 
 ;=====================================================
 
@@ -254,13 +254,13 @@ label-unfocused-padding = 4
 label-unfocused-foreground = ${colours.primary}
 
 label-visible = %name%
-label-visible-underline = ${colours.secondary}
+label-visible-underline = ${colours.primary}
 label-visible-padding = 4
 
 ;label-urgent = %name%
 label-urgent = ""
 ;label-urgent-background = ${colours.purple}
-label-urgent-foreground = ${colours.purple}
+label-urgent-foreground = ${colours.alert}
 ;label-urgent-underline = ${colours.alert}
 label-urgent-padding = 4
 
