@@ -20,6 +20,7 @@
 " Always exit all files
 
 cnoreabbrev q qa
+cnoreabbrev wq wqa
 
 "=====================================================
 
@@ -29,8 +30,8 @@ augroup General
 
     autocmd FileType markdown,text setlocal spell
 
-    autocmd BufReadPost * Goyo 90%x90%
-    autocmd BufReadPost *.md Goyo 75%x80%
+"    autocmd BufReadPost * Goyo 90%x90%
+"    autocmd BufReadPost *.md Goyo 75%x80%
 
     autocmd VimResized * execute "normal \<C-W>="
 
@@ -110,6 +111,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'rhysd/open-pdf.vim'
 
+Plug 'airblade/vim-gitgutter'
+
 " End list
 
 call plug#end()
@@ -177,3 +180,5 @@ vnoremap <down> gj
 vnoremap <up> gk
 
 "=====================================================
+
+set updatetime=100
