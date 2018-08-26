@@ -334,7 +334,7 @@ type = custom/script
 exec = playerctl status &> /dev/null && echo "$(playerctl metadata artist) - $(playerctl metadata title)" || echo ""
 interval = 1
 
-format =  <label>
+format =   <label>
 label-maxlen = 25
 label-ellipsis = true
 
