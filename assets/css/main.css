@@ -3555,7 +3555,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #000000;
+			border-top: solid 2px #171717;
 		}
 
 			#main > .main:first-child {
