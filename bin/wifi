@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-network="$(iwgetid -r)"
-
-dunstify -t 2000 -r 13596705 "Wifi: ${network}"
