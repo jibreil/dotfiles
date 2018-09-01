@@ -3266,7 +3266,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a:hover {
-						background-color: rgba(222, 222, 222, 0.25);
+						background-color: rgba(150, 150, 150, 0.25);
 					}
 
 					#nav ul li a.active {
@@ -3555,7 +3555,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 2px #151718;
+			border-top: solid 1px #151718;
 		}
 
 			#main > .main:first-child {
