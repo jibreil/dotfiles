@@ -303,19 +303,19 @@ input, select, textarea {
 	}
 
 	input, select, textarea {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	a:hover {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	strong, b {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	blockquote {
@@ -1925,7 +1925,7 @@ input, select, textarea {
 	.button {
 		background-color: transparent;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff !important;
+		color: #212121 !important;
 	}
 
 		input[type="submit"]:hover,
@@ -1958,7 +1958,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background-color: #8cc9f0;
-			color: #ffffff !important;
+			color: #212121 !important;
 			box-shadow: none;
 		}
 
@@ -1983,7 +1983,7 @@ input, select, textarea {
 			input[type="button"].primary.icon:before,
 			button.primary.icon:before,
 			.button.primary.icon:before {
-				color: #ffffff !important;
+				color: #212121 !important;
 			}
 
 /* Form */
@@ -2135,7 +2135,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	input[type="text"],
@@ -2161,7 +2161,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
+			color: #212121;
 			background: #935d8c;
 		}
 
@@ -2178,8 +2178,8 @@ input, select, textarea {
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #ffffff;
-		border-color: #ffffff;
+		background-color: #212121;
+		border-color: #212121;
 		color: #935d8c;
 	}
 
@@ -2328,7 +2328,7 @@ input, select, textarea {
 
 	.icon.alt {
 		border-color: rgba(255, 255, 255, 0.35);
-		color: #ffffff;
+		color: #212121;
 	}
 
 		.icon.alt:hover {
@@ -2467,7 +2467,7 @@ input, select, textarea {
 	}
 
 	dl dt {
-		color: #ffffff;
+		color: #212121;
 	}
 
 /* Actions */
@@ -2756,7 +2756,7 @@ input, select, textarea {
 		}
 
 	table th {
-		color: #ffffff;
+		color: #212121;
 	}
 
 	table thead {
@@ -2858,7 +2858,7 @@ input, select, textarea {
 			-ms-flex: 1;
 			flex: 1;
 			padding: 1.5em;
-			color: #ffffff;
+			color: #212121;
 			text-align: center;
 		}
 
@@ -3194,13 +3194,13 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
-		color: #636363;
+		background-color: #171717;
+		color: #ffffff;
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
-		background-color: #f7f7f7;
+		background-color: #171717;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
@@ -3208,32 +3208,32 @@ input, select, textarea {
 	}
 
 		#nav input, #nav select, #nav textarea {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#nav a:hover {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#nav strong, #nav b {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#nav blockquote {
-			border-left-color: #dddddd;
+			border-left-color: #000000;
 		}
 
 		#nav code {
 			background: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 		#nav hr {
-			border-bottom-color: #dddddd;
+			border-bottom-color: #000000;
 		}
 
 		#nav + #main {
@@ -3276,7 +3276,7 @@ input, select, textarea {
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-color: #212121;
 						box-shadow: none;
 					}
 
@@ -3313,42 +3313,42 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
-		color: #636363;
+		background-color: #212121;
+		color: #ffffff;
 		border-radius: 0.25em;
 	}
 
 		#main input, #main select, #main textarea {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main a:hover {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main blockquote {
-			border-left-color: #dddddd;
+			border-left-color: #000000;
 		}
 
 		#main code {
 			background: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 		#main hr {
-			border-bottom-color: #dddddd;
+			border-bottom-color: #000000;
 		}
 
 		#main .box {
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 		#main input[type="submit"],
@@ -3357,8 +3357,8 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: transparent;
-			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #636363 !important;
+			box-shadow: inset 0 0 0 1px #000000;
+			color: #ffffff !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3391,7 +3391,7 @@ input, select, textarea {
 			#main button.primary,
 			#main .button.primary {
 				background-color: #8cc9f0;
-				color: #ffffff !important;
+				color: #212121 !important;
 				box-shadow: none;
 			}
 
@@ -3416,11 +3416,11 @@ input, select, textarea {
 				#main input[type="button"].primary.icon:before,
 				#main button.primary.icon:before,
 				#main .button.primary.icon:before {
-					color: #ffffff !important;
+					color: #212121 !important;
 				}
 
 		#main label {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main input[type="text"],
@@ -3429,7 +3429,7 @@ input, select, textarea {
 		#main select,
 		#main textarea {
 			background-color: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 			#main input[type="text"]:focus,
@@ -3446,26 +3446,26 @@ input, select, textarea {
 		}
 
 			#main select option {
-				color: #636363;
-				background: #ffffff;
+				color: #ffffff;
+				background: #212121;
 			}
 
 		#main input[type="checkbox"] + label,
 		#main input[type="radio"] + label {
-			color: #636363;
+			color: #ffffff;
 		}
 
 			#main input[type="checkbox"] + label:before,
 			#main input[type="radio"] + label:before {
 				background: rgba(222, 222, 222, 0.25);
-				border-color: #dddddd;
+				border-color: #000000;
 			}
 
 		#main input[type="checkbox"]:checked + label:before,
 		#main input[type="radio"]:checked + label:before {
-			background-color: #636363;
-			border-color: #636363;
-			color: #ffffff;
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #212121;
 		}
 
 		#main input[type="checkbox"]:focus + label:before,
@@ -3495,16 +3495,16 @@ input, select, textarea {
 		}
 
 		#main .icon.major {
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 			#main .icon.major:before {
-				border-color: #dddddd;
+				border-color: #000000;
 			}
 
 		#main .icon.alt {
-			border-color: #dddddd;
-			color: #636363;
+			border-color: #000000;
+			color: #ffffff;
 		}
 
 			#main .icon.alt:hover {
@@ -3516,15 +3516,15 @@ input, select, textarea {
 			}
 
 		#main ul.alt li {
-			border-top-color: #dddddd;
+			border-top-color: #000000;
 		}
 
 		#main dl dt {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
+			background-color: #000000;
 			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
@@ -3532,7 +3532,7 @@ input, select, textarea {
 		}
 
 		#main table tbody tr {
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 			#main table tbody tr:nth-child(2n + 1) {
@@ -3540,28 +3540,28 @@ input, select, textarea {
 			}
 
 		#main table th {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main table thead {
-			border-bottom-color: #dddddd;
+			border-bottom-color: #000000;
 		}
 
 		#main table tfoot {
-			border-top-color: #dddddd;
+			border-top-color: #000000;
 		}
 
 		#main table.alt tbody tr td {
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 		#main .spotlight .image {
-			border-color: #dddddd;
+			border-color: #000000;
 		}
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+			border-top: solid 1px #000000;
 		}
 
 			#main > .main:first-child {
