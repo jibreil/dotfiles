@@ -125,9 +125,9 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Inconsolata', monospace;
 		font-size: 17pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65;
 	}
 
@@ -170,7 +170,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 700;
 	}
 
 	em, i {
