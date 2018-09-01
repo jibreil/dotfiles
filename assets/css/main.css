@@ -3188,13 +3188,13 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #171717;
+		background-color: #151718;
 		color: #ffffff;
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
-		background-color: #171717;
+		background-color: #151718;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
@@ -3278,7 +3278,7 @@ input, select, textarea {
 			position: fixed;
 			top: 0;
 			padding: 0.5em 1em;
-			background-color: rgba(23, 23, 23, 0.95);
+			background-color: rgba(21, 23, 24, 0.95);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			z-index: 10000;
@@ -3555,7 +3555,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 2px #171717;
+			border-top: solid 2px #151718;
 		}
 
 			#main > .main:first-child {
