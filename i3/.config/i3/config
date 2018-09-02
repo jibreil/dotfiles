@@ -67,7 +67,7 @@ client.urgent            #151718   #151718   #e6cd69   #e6cd69
 
 ## compton
 
-exec --no-startup-id compton
+exec_always --no-startup-id compton
 
 
 ## change window focus
