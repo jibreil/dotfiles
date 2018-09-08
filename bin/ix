@@ -12,3 +12,7 @@
 $p "$*" | curl -sF 'f:1=<-' ix.io | xclip -selection primary
 
 xclip -o
+
+url=$(xclip -o)
+
+dunstify -t 2000 -r 13596705 "Upload complete" "$url"
