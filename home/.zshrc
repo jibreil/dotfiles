@@ -6,12 +6,15 @@ alias clock='tty-clock -scD -C 5'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
 alias n='nvim'
-alias neofetch='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5'
+alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5'
 alias please='sudo'
 alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
+alias add='git add -A'
+alias commit='git commit'
+alias push='git push'
 pullall() {
     find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 }
