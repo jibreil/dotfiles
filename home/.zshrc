@@ -12,6 +12,11 @@ alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
+alias unpack='tar -xvJpf'
+pack() {
+    tar -cvJpf "$1".tar.xz "$1/" ;
+}
+
 alias add='git add -A'
 alias commit='git commit'
 alias push='git push'
