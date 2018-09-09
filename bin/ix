@@ -9,7 +9,7 @@
 
 [ -f "$1" ] && p=cat || p=echo
 
-$p "$*" | curl -sF 'f:1=<-' ix.io | xclip -selection primary
+$p "$*" | curl -sF 'f:1=<-' ix.io | xclip -selection clipboard
 
 xclip -o
 
