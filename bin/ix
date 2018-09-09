@@ -9,10 +9,8 @@
 
 [ -f "$1" ] && p=cat || p=echo
 
-$p "$*" | curl -sF 'f:1=<-' ix.io | xclip -selection clipboard
+url=$($p "$*" | curl -sF 'f:1=<-' ix.io)
 
-xclip -o
-
-url=$(xclip -o)
+echo $url && echo $url | xclip -selection clipboard
 
 dunstify -t 2000 -r 13596705 "Upload complete" "$url"
