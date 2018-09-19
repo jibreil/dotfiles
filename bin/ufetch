@@ -13,7 +13,7 @@ uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename ${SHELL})"
 if [ -z "${WM}" ]; then
-	WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
+    WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
 fi
 
 ## DEFINE COLORS

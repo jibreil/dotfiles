@@ -16,7 +16,7 @@ echo
 
 color-echo()
 {  # print with colors
-  echo -e " $grn$1  $rst$2"
+    echo -e " $grn$1  $rst$2"
 }
 
 # kernel
