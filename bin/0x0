@@ -41,7 +41,7 @@ file_upload() {
     printf '%s' "${url}"
     [ -t 1 ] && printf '\n'
     clip "${url}"
-    echo "${url}" | xclip -selection clipboard
+    echo "${url}" | xclip -selection clipboard && echo "${url}" | xclip -selection primary
     dunstify -t 2000 -r 13596705 "File uploaded" "$url"
 }
 
@@ -54,7 +54,7 @@ shorten_url() {
     printf '%s' "${shortened}"
     [ -t 1 ] && printf '\n'
     clip "${shortened}"
-    echo "${shortened}" | xclip -selection clipboard
+    echo "${shortened}" | xclip -selection clipboard && echo "${shortened}" | xclip -selection primary
     dunstify -t 2000 -r 13596705 "Link shortened" "$shortened"
 }
 
@@ -67,7 +67,7 @@ upload_url() {
     printf '%s' "${uploaded}"
     [ -t 1 ] && printf '\n'
     clip "${uploaded}"
-    echo "${uploaded}" | xclip -selection clipboard
+    echo "${uploaded}" | xclip -selection clipboard && echo "${uploaded}" | xclip -selection primary
     dunstify -t 2000 -r 13596705 "Content uploaded" "$uploaded"
 }
 
@@ -91,18 +91,18 @@ case "$mode" in
         else
             cat | quiet=true file_upload "/dev/stdin"
         fi
-    ;;
+        ;;
     -f)
         file_upload "${@}"
-    ;;
+        ;;
     -u)
         upload_url "${@}"
-    ;;
+        ;;
     -s)
         shorten_url "${@}"
-    ;;
+        ;;
     -h|--help)
         help
-    ;;
+        ;;
 esac
 
