@@ -196,6 +196,15 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 
+## numpad binds
+
+# kill window
+bindsym $mod+Muhenkan kill
+
+# toggle floating
+bindsym $mod+Hiragana_Katakana floating toggle
+
+
 ## power menu
 
 bindsym $mod+Shift+Delete mode "power: [l]ock | [r]eboot | [s]uspend | sh[u]tdown"
