@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+# name:		teknik-paste
+# author:	KittyKatt
+# requires:	bash 4.0+, curl
+
+usage() {
+    echo "usage: pastebin [options] [file]"
+    echo "options:"
+    echo "  -h, --help   print help and exit"
+    echo "  -t,          title of paste"
+    echo "  -u,          units of the paste expiration, possible values are view, minute, hour, day, month, year"
+    echo "  -e,          length of paste expiration"
+    echo "  -f,          language/file type of paste, plaintext by default"
+    echo "  -p,          password for paste"
+    echo "  -s,          choose to show paste in recent pastes list (yes or no)"
+    echo "  -F,          file to upload as paste"
+}
+
+querystring="paste=yes"
+
+while getopts "t:f:F:u:e:p:s:h" flags; do
+    case "${flags}" in
+        h)
+            usage
+            exit 0
+            ;;
+        t)
+            title=$(echo "${OPTARG}" | tr ' ' '%20')
+            querystring="${querystring}&title=${title}"
+            ;;
+        u)
+            expireUnit=$(echo "${OPTARG}")
+            querystring="${querystring}&expireUnit=${expireUnit}"
+            ;;
+        e)
+            expireLength=$(echo "${OPTARG}")
+            querystring="${querystring}&expireLength=${expireLength}"
+            ;;
+        F)
+            if [ -z "${OPTARG}" ]; then
+                printf 'You have to supply a file to upload to the pastebin!\n'
+                exit 1
+            else
+                fileinput="${OPTARG}"
+            fi
+            ;;
+        f)
+            format="${OPTARG}"
+            querystring="${querystring}&syntax=${format}"
+            ;;
+        p)
+            password="${OPTARG}"
+            querystring="${querystring}&password=${password}"
+            ;;
+        s)
+            if [[ "${OPTARG}" == "yes" ]]; then
+                hide="true"
+            elif [[ "${OPTARG}" == "no" ]]; then
+                hide="false"
+            else
+                printf "That is not a valid option. Specify either yes or no."
+                exit 1
+            fi
+            querystring="${querystring}&hide=${hide}"
+            ;;
+    esac
+done	
+
+if [ -n "${fileinput}" ]; then
+    input=$(cat "${fileinput}")
+else
+    input="$(</dev/stdin)"
+fi
+
+if [[ -n "${input}" ]]; then
+    output=$(curl -u <username>:<token> --silent --data "${querystring}" --data-urlencode "code=${input}" https://api.teknik.io/v1/Paste)
+    pasteid=$(grep -Eo '"id":"[0-9a-zA-Z]+' <<< "${output}" | sed 's/\\//g')
+    pasteid="${pasteid##\"id\":\"}"
+    if [[ -n "${pasteid}" ]]; then
+        [[ -n "${title}" ]] && printf "Title Specified: ${title}\n"
+        [[ -n "${expiry}" ]] && printf "Expiration Specified: ${expiry}\n"
+        [[ -n "${format}" ]] && printf "Paste Format Specified: ${format}\n"
+        [[ -n "${password}" ]] && printf "Paste is password protected!\n"
+        printf "Your paste can be found at https://paste.teknik.io/${pasteid}\n"
+        url="https://paste.teknik.io/${pasteid}"
+        echo "$url" | xclip -selection primary
+        echo "$url" | xclip -selection clipboard
+        dunstify "Upload complete" "$url"
+        exit 0
+    else
+        printf "There was an error submitting your paste! We are sorry."
+        exit 1
+    fi
+else
+    printf "Error! Nothing found on standard input. Did you submit anything to paste?"
+    exit 1
+fi
