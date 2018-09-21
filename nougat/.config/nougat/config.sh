@@ -2,4 +2,4 @@
 SELECTION_METHOD="default"
 SCREENSHOT_DIRECTORY="$HOME/pictures/screenshots"
 SCREENCAST_DIRECTORY="$HOME/videos/recordings"
-DEFAULT_POLICY='${year}/${month}/${day}/${hour}:${minute}:${second}'
+ORGANIZATION_POLICY='${year}/${month}/${day}/${hour}:${minute}:${second}'
