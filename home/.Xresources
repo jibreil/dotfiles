@@ -1,4 +1,5 @@
 ! Fonts
+
 Xft.dpi: 96
 Xft.hinting: true
 Xft.rgba: rgb
@@ -7,6 +8,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! URxvt
+
 !URxvt.font: xft:scientifica:size=8
 !URxvt.boldFont: xft:scientifica:size=8
 
@@ -26,12 +28,32 @@ URxvt.externalBorder: 0
 URxvt.internalBorder: 40
 
 ! rofi
-rofi.font: Iosevka Term Regular 12
+
+rofi.bw: 8
+rofi.font: Iosevka Term Regular 10
+rofi.color-enabled: true
+rofi.color-window: #151718, #a074c4, #2c2e2f
+rofi.color-normal: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.color-active: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.color-urgent: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.line-margin: 5
+! rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.matching: fuzzy
+rofi.lines: 10
+rofi.width: 20
+! rofi.location: 2
+rofi.padding: 40
+rofi.fullscreen: false
+rofi.auto-select: true
+
 rofi.terminal: urxvt
 rofi.ssh-client: ssh
 
+rofi.dpi: 160
+
 ! Base16 Seti UI
-! Scheme: 
+! Scheme:
 
 #define base00 #151718
 #define base01 #282a2b
