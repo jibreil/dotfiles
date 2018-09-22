@@ -16,7 +16,7 @@ Nougat - screenshot wrapper created to help organize screenshots
               Particularly useful as it cleans any links that no
               longer point to a screenshot (i.e. deleted screeenshot).
 EOF
-exit
+    exit
 }
 temporary=false
 clean=false
@@ -45,7 +45,7 @@ SCREENSHOT_DIRECTORY="${NOUGAT_SCREENSHOT_DIRECTORY}"
 ORGANIZATION_POLICY="${NOUGAT_ORGANIZATION_POLICY}"
 NOUGAT_LINKING_POLICY="${NOUGAT_LINKING_POLICY}"
 EOF
-# V1
+    # V1
     elif [[ -n "${NOUGAT_SCREENSHOT_DIRECTORY}" ]]
     then
         cat >> "${configfile}" << EOF
@@ -77,8 +77,8 @@ getconfiguration(){
 require(){
     command -v "$1" &> /dev/null || {
         echo "$1 is not installed and is required."
-    exit 1
-}
+        exit 1
+    }
 }
 maketemp(){
     path=`mktemp`
@@ -94,12 +94,12 @@ getcanonicalpaths(){
     extension="${2}"
     if [[ "${3}" == "image" ]]
     then
-        base_path="`getconfiguration SCREENSHOT_DIRECTORY`"
+        base_path="`getconfiguration SCREENSHOT_DIRECTORY`/screenshot-"
     elif [[ "${3}" == "video" ]]
     then
-        base_path="`getconfiguration SCREENCAST_DIRECTORY`"
+        base_path="`getconfiguration SCREENCAST_DIRECTORY`/recording-"
     fi
-    org_fullpath="${base_path}/`getconfiguration ORGANIZATION_POLICY`"
+    org_fullpath="${base_path}`getconfiguration ORGANIZATION_POLICY`"
     org_fullpath="${org_fullpath}${suffix}.${extension}"
     if [[ -n "`getconfiguration LINKING_POLICY`" ]]
     then
@@ -231,21 +231,21 @@ record_region(){
     sleep 0.1
     [[ -z "${geometry}" ]] && exit 0
     read -r width height x y <<< ${geometry}
-    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+${x},${y} -vcodec libx264 -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
+    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+${x},${y} -vcodec libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
     post ${path}
 }
 record_fullscreen(){
     path=`maketemp mp4`
     geometry=`select_root_window`
     read -r width height x y <<< ${geometry}
-    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+0,0 -vcodec libx264 -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
+    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+0,0 -vcodec libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
     post ${path}
 }
 record_focused_monitor(){
     path=`maketemp mp4`
     geometry=`select_focused_monitor`
     read -r width height x y <<< ${geometry}
-    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+${x},${y} -vcodec libx264 -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
+    ffmpeg -f x11grab -s ${width}x${height} -i :0.0+${x},${y} -vcodec libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -vsync 0 -y -loglevel 0 ${path}
     post ${path}
 }
 require import
@@ -333,8 +333,8 @@ do
             # not yet implemented
             shift
             ;;
-            #config variables
-            --selection-method)
+        #config variables
+        --selection-method)
             SELECTION_METHOD=${2:-${SELECTION_METHOD}}
             shift 2
             ;;
@@ -354,13 +354,13 @@ do
             LINKING_POLICY=${2:-${LINKING_POLICY}}
             shift 2
             ;;
-            # Screenshot
-            --screenshot)
+        # Screenshot
+        --screenshot)
             setaction 'capture'
             shift
             ;;
-            # Record
-            --record)
+        # Record
+        --record)
             setaction 'record'
             shift
             ;;
