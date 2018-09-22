@@ -1,7 +1,8 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
-alias arch='neofetch -L'
-alias c='clear'
+alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%H:%M:%S%%-c.%%e""
+
+alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
 alias clock='tty-clock -scD -C 5'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
@@ -12,12 +13,26 @@ alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
+#alias c='clear'
+c() {
+    if [ $# -eq 0 ] ; then
+        clear
+    elif [ -d "$1" ] ; then
+        cd "$1"
+    elif [ -f "$1" ] ; then
+        cat "$1"
+    fi
+}
+
 alias add='git add -A'
 alias commit='git commit'
 alias push='git push'
 pullall() {
     find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 }
+
+alias html='pandoc --webtex -o'
+alias pdf='pandoc -V geometry:margin=1in -V mainfont="Open Sans" --toc --pdf-engine=xelatex -o'
 
 # Set default editor
 
