@@ -98,6 +98,9 @@ call plug#begin('~/.vim/plugged')
 
 " Plugin list
 
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 Plug 'junegunn/goyo.vim'
 
 Plug 'DougBeney/pickachu'
@@ -116,6 +119,15 @@ Plug 'airblade/vim-gitgutter'
 " End list
 
 call plug#end()
+
+"=====================================================
+
+" Ranger
+
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
 
 "=====================================================
 
