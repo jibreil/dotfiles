@@ -116,6 +116,8 @@ Plug 'rhysd/open-pdf.vim'
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'vimwiki/vimwiki'
+
 " End list
 
 call plug#end()
@@ -181,6 +183,14 @@ set ttyfast
 
 "=====================================================
 
+" VimWiki
+
+set nocompatible
+filetype plugin on
+syntax on
+
+"=====================================================
+
 " Wrapping
 
 set breakindent
@@ -194,3 +204,7 @@ vnoremap <up> gk
 "=====================================================
 
 set updatetime=100
+
+hi TabLineSel ctermfg=5 ctermbg=0
+hi TabLine ctermfg=7 ctermbg=0
+hi TabLineFill ctermfg=0 ctermbg=1
