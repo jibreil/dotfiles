@@ -49,7 +49,7 @@ bar-bottom-gap = 30
 
 ;=====================================================
 
-[bar/example]
+[bar/kingk22]
 monitor = HDMI-2
 bottom = true
 fixed-center = true
@@ -83,7 +83,7 @@ font-4 = Kochi Gothic:size=8;0
 
 modules-left = i3 spotify
 modules-center = xwindow
-modules-right = xkeyboard wlan backlight-acpi volume battery date
+modules-right = xkeyboard2 xkeyboard wlan backlight-acpi volume battery date
 
 ;separator = |
 
@@ -335,7 +335,7 @@ exec = playerctl status &> /dev/null && echo "$(playerctl metadata artist) - $(p
 interval = 1
 
 format =   <label>
-label-maxlen = 25
+label-maxlen = 40
 label-ellipsis = true
 
 format-foreground = ${colours.primary}
@@ -374,12 +374,24 @@ format-muted-foreground = ${colours.purple}
 
 [module/xkeyboard]
 type = internal/xkeyboard
+
+format = <label-indicator>
+
+label-indicator = 
+
+label-indicator-padding = 2
+label-indicator-foreground = ${colours.purple}
+
+;=====================================================
+
+[module/xkeyboard2]
+type = internal/xkeyboard
+
 blacklist-0 = num lock
 
 format = <label-indicator>
 
-label-indicator-padding = 3
-;label-indicator-background = ${colours.purple}
+label-indicator-padding = 0
 label-indicator-foreground = ${colours.purple}
 
 ;=====================================================

@@ -28,10 +28,11 @@ cnoreabbrev wq wqa
 
 augroup General
 
-    autocmd FileType markdown,text setlocal spell
+    autocmd FileType markdown,text,vimwiki setlocal spell
 
 "    autocmd BufReadPost * Goyo 90%x90%
-"    autocmd BufReadPost *.md Goyo 75%x80%
+    autocmd BufReadPost *.md Goyo 85%x85%
+    autocmd BufReadPost *.wiki Goyo 85%x85%
 
     autocmd VimResized * execute "normal \<C-W>="
 

@@ -1,9 +1,8 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
-alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%H:%M:%S%%-c.%%e""
-
 alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
 alias clock='tty-clock -scD -C 5'
+alias delete='rm'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
 alias n='nvim'
@@ -12,6 +11,8 @@ alias please='sudo'
 alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
+
+alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%dT%H:%M:%S%%-c.%%e""
 
 #alias c='clear'
 c() {
@@ -132,3 +133,5 @@ source $ZSH/oh-my-zsh.sh
 
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+eval $(thefuck --alias)
