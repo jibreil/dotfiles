@@ -92,7 +92,7 @@ bindsym $mod+space focus mode_toggle
 
 ## font
 
-font pango:iosevka 12
+font pango:iosevka 16
 
 
 ## gaps
@@ -196,14 +196,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 
-## numpad binds
-
-# kill window
-bindsym $mod+Muhenkan kill
-
-# toggle floating
-bindsym $mod+Hiragana_Katakana floating toggle
-
 
 ## power menu
 
@@ -296,37 +288,35 @@ bindsym $mod+Return exec urxvt --depth 32
 
 ## volume
 
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5 && ~/bin/volume
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5 && ~/bin/volume
-bindsym XF86AudioMute exec pulseaudio-ctl mute && ~/bin/volume
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5
+bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 bindsym $mod+slash mode "volume"
 
 mode "volume" {
-    bindsym plus exec pulseaudio-ctl up && ~/bin/volume
-    bindsym minus exec pulseaudio-ctl down && ~/bin/volume
+    bindsym plus exec pulseaudio-ctl up
+    bindsym minus exec pulseaudio-ctl down
 
-    bindsym Up exec pulseaudio-ctl up && ~/bin/volume
-    bindsym Down exec pulseaudio-ctl down && ~/bin/volume
+    bindsym Up exec pulseaudio-ctl up
+    bindsym Down exec pulseaudio-ctl down
 
-    bindsym 1 exec pulseaudio-ctl set 10 && ~/bin/volume
-    bindsym 2 exec pulseaudio-ctl set 20 && ~/bin/volume
-    bindsym 3 exec pulseaudio-ctl set 30 && ~/bin/volume
-    bindsym 4 exec pulseaudio-ctl set 40 && ~/bin/volume
-    bindsym 5 exec pulseaudio-ctl set 50 && ~/bin/volume
-    bindsym 6 exec pulseaudio-ctl set 60 && ~/bin/volume
-    bindsym 7 exec pulseaudio-ctl set 70 && ~/bin/volume
-    bindsym 8 exec pulseaudio-ctl set 80 && ~/bin/volume
-    bindsym 9 exec pulseaudio-ctl set 90 && ~/bin/volume
-    bindsym 0 exec pulseaudio-ctl set 100 && ~/bin/volume 
+    bindsym 1 exec pulseaudio-ctl set 10
+    bindsym 2 exec pulseaudio-ctl set 20
+    bindsym 3 exec pulseaudio-ctl set 30
+    bindsym 4 exec pulseaudio-ctl set 40
+    bindsym 5 exec pulseaudio-ctl set 50
+    bindsym 6 exec pulseaudio-ctl set 60
+    bindsym 7 exec pulseaudio-ctl set 70
+    bindsym 8 exec pulseaudio-ctl set 80
+    bindsym 9 exec pulseaudio-ctl set 90
+    bindsym 0 exec pulseaudio-ctl set 100 
     
-    bindsym m exec pulseaudio-ctl mute && ~/bin/volume
+    bindsym m exec pulseaudio-ctl mute
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-bindsym $mod+c exec status
 
 
 ## wallpaper/colours
