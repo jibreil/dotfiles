@@ -41,7 +41,7 @@ secondary = #bf5f4d
 
 [sizes]
 bar-width = 2520
-bar-height = 38
+bar-height = 50
 
 bar-offset-x = 40
 bar-top-gap = 30
@@ -50,7 +50,7 @@ bar-bottom-gap = 30
 ;=====================================================
 
 [bar/kingk22]
-monitor = HDMI-2
+monitor = eDP1
 bottom = true
 fixed-center = true
 width = ${sizes.bar-width}
@@ -75,15 +75,15 @@ padding-right = 5
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = WunconSiji
-font-1 = FontAwesome:size=12;0
-font-2 = Iosevka:weight=medium:pixelsize=12;0
+font-0 = Wuncon Siji
+font-1 = FontAwesome:size=18;0
+font-2 = Iosevka:weight=medium:pixelsize=18;0
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
-modules-left = i3 spotify
+modules-left = i3
 modules-center = xwindow
-modules-right = xkeyboard2 xkeyboard wlan backlight-acpi volume battery date
+modules-right = xkeyboard bluetooth wlan backlight-acpi pulseaudio-rofi battery date
 
 ;separator = |
 
@@ -121,6 +121,7 @@ screenchange-reload = true
 ;   Modules
 ;
 ;=====================================================
+
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -181,6 +182,20 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = ${colours.purple}
 animation-charging-framerate = 250
+
+;=====================================================
+
+[module/bluetooth]
+type = custom/script
+
+exec = ~/.config/polybar/bluetooth.sh
+
+tail = true
+
+format-foreground = ${colours.primary}
+
+double-click-left = bluetoothctl -- power on
+double-click-right = bluetoothctl -- power off
 
 ;=====================================================
 
@@ -300,7 +315,7 @@ bar-progress-empty = ─
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp4s0
 interval = 3.0
 
 format-connected = <label-connected>
@@ -358,22 +373,42 @@ label-warn = TEMP: %temperature%
 
 ;=====================================================
 
-[module/volume]
-type = internal/volume
+[module/pulseaudio-rofi]
+type = custom/script
 
-format-volume = <label-volume>
-label-volume =  %percentage%%
+exec = ~/.config/polybar/pulseaudio-rofi.sh --output_volume_listener
 
-format-muted = <label-muted>
-label-muted =  mute
+tail = true
 
-format-volume-foreground = ${colours.primary}
-format-muted-foreground = ${colours.purple}
+click-right = ~/.config/polybar/pulseaudio-rofi.sh --output
+click-left = ~/.config/polybar/pulseaudio-rofi.sh --mute
+scroll-up =  ~/.config/polybar/pulseaudio-rofi.sh --volume_up
+scroll-down = ~/.config/polybar/pulseaudio-rofi.sh --volume_down
+
+format =  <label>
+format-foreground = ${colours.primary}
+
+;[module/volume]
+;type = internal/volume
+;format-volume = <label-volume>
+;label-volume =  %percentage%%
+;format-muted = <label-muted>
+;label-muted =  mute
+;format-volume-foreground = ${colours.primary}
+;format-muted-foreground = ${colours.purple}
+
+;[module/pulseaudio]
+;type = internal/pulseaudio
+;sink = (from 'pacmd list-sinks | grep -i "name.*>"'
+;use-ui-max = true
+;interval = 5
 
 ;=====================================================
 
 [module/xkeyboard]
 type = internal/xkeyboard
+
+blacklist-0 = num lock
 
 format = <label-indicator>
 

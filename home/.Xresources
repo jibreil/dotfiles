@@ -15,10 +15,10 @@ Xft.lcdfilter: lcddefault
 !URxvt.font:xft:curie:size=8
 !URxvt.boldFont:xft:curie:size=8
 
-URxvt.font: xft:Iosevka Term:style=medium:size=12
-URxvt.boldFont: xft:Iosevka Term:style=bold:size=12
-URxvt.italicFont: xft:Iosevka Term:style=italic:size=12
-URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=12
+URxvt.font: xft:Iosevka Term:style=regular:size=16
+URxvt.boldFont: xft:Iosevka Term:style=bold:size=16
+URxvt.italicFont: xft:Iosevka Term:style=italic:size=16
+URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=16
 
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: 1
@@ -30,7 +30,7 @@ URxvt.internalBorder: 40
 ! rofi
 
 rofi.bw: 8
-rofi.font: Iosevka Term Regular 10
+rofi.font: Iosevka Term Regular 14
 rofi.color-enabled: true
 rofi.color-window: #151718, #a074c4, #2c2e2f
 rofi.color-normal: #151718, #d0d0d0, #151718, #a074c4, #151718
@@ -40,8 +40,8 @@ rofi.line-margin: 5
 ! rofi.separator-style: solid
 rofi.hide-scrollbar: true
 rofi.matching: fuzzy
-rofi.lines: 10
-rofi.width: 20
+rofi.lines: 5
+rofi.width: 30
 ! rofi.location: 2
 rofi.padding: 40
 rofi.fullscreen: false

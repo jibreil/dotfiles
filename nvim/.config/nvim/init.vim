@@ -87,7 +87,7 @@ set shiftwidth=4
 
 " Pickachu
 
-let g:pickachu_default_date_format = "%d.%m.%Y"
+" let g:pickachu_default_date_format = "%d.%m.%Y"
 
 "=====================================================
 
@@ -104,7 +104,7 @@ Plug 'rbgrouleff/bclose.vim'
 
 Plug 'junegunn/goyo.vim'
 
-Plug 'DougBeney/pickachu'
+" Plug 'DougBeney/pickachu'
 
 Plug 'google/vim-codefmt'
 Plug 'google/vim-maktaba'
