@@ -1,10 +1,13 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
+alias e='fzf | xargs -r $EDITOR'
+
 alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
 alias clock='tty-clock -scD -C 5'
 alias delete='rm'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
+alias el='exal'
 alias n='nvim'
 alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5'
 alias please='sudo'
@@ -14,7 +17,6 @@ alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
 alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%dT%H:%M:%S%%-c.%%e""
 
-#alias c='clear'
 c() {
     if [ $# -eq 0 ] ; then
         clear
