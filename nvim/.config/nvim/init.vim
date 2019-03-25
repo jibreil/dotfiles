@@ -167,11 +167,12 @@ set splitright
 " UI
 
 set cmdheight=2
-set laststatus=0
-set noshowmode
+set laststatus=1
+"set noshowmode
 set number
-set scrolloff=5
-set shortmess=atI
+set relativenumber
+set scrolloff=10
+set shortmess=at
 set ttyfast
 
 "=====================================================
