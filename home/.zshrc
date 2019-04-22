@@ -1,13 +1,13 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
-alias e='fzf | xargs -r $EDITOR'
-
 alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
 alias clock='tty-clock -scD -C 5'
 alias delete='rm'
+alias e='fzf | xargs -r $EDITOR'
+alias el='exal'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
-alias el='exal'
+alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%dT%H:%M:%S%%-c.%%e""
 alias n='nvim'
 alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5'
 alias please='sudo'
@@ -15,7 +15,15 @@ alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
-alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%dT%H:%M:%S%%-c.%%e""
+alias add='git add -A'
+alias commit='git commit'
+alias push='git push'
+
+alias pullall="find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'"
+alias sendit='git add -A; git commit -m "$1"; git push'
+
+alias html='pandoc --webtex -o'
+alias pdf='pandoc -V geometry:margin=1in -V mainfont="Open Sans" --toc --pdf-engine=xelatex -o'
 
 c() {
     if [ $# -eq 0 ] ; then
@@ -26,14 +34,6 @@ c() {
         cat "$1"
     fi
 }
-
-alias add='git add -A'
-alias commit='git commit'
-alias push='git push'
-alias pullall="find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'"
-
-alias html='pandoc --webtex -o'
-alias pdf='pandoc -V geometry:margin=1in -V mainfont="Open Sans" --toc --pdf-engine=xelatex -o'
 
 # Set default editor
 
