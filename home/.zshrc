@@ -17,10 +17,15 @@ alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 
 alias add='git add -A'
 alias commit='git commit'
+alias pull='git pull'
 alias push='git push'
 
 alias pullall="find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'"
-alias sendit='git add -A; git commit -m "$1"; git push'
+sendit() {
+    git add -A
+    git commit -m "$1"
+    git push
+}
 
 alias html='pandoc --webtex -o'
 alias pdf='pandoc -V geometry:margin=1in -V mainfont="Open Sans" --toc --pdf-engine=xelatex -o'
