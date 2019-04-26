@@ -44,8 +44,8 @@ bar-width = 2520
 bar-height = 50
 
 bar-offset-x = 40
-bar-top-gap = 30
-bar-bottom-gap = 30
+bar-top-gap = 20
+bar-bottom-gap = 20
 
 ;=====================================================
 
