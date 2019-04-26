@@ -22,7 +22,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 8
-for_window [class="mpv"] border pixel 8
 for_window [class="Zathura"] border pixel 8
 
 
@@ -30,30 +29,6 @@ for_window [class="Zathura"] border pixel 8
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +10% && sleep 0.1 && brightnessctl get
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sleep 0.1 && brightnessctl get
-
-bindsym $mod+backslash mode "brightness"
-
-mode "brightness" {
-    bindsym plus exec sudo brightnessctl set +10% && sleep 0.1 && brightnessctl get
-    bindsym minus exec sudo brightnessctl set 10%- && sleep 0.1 && brightnessctl get
-
-    bindsym Up exec sudo brightnessctl set +10% && sleep 0.1 && brightnessctl get
-    bindsym Down exec sudo brightnessctl set 10%- && sleep 0.1 && brightnessctl get
-
-    bindsym 1 exec sudo brightnessctl set 10% && sleep 0.1 && brightnessctl get
-    bindsym 2 exec sudo brightnessctl set 20% && sleep 0.1 && brightnessctl get
-    bindsym 3 exec sudo brightnessctl set 30% && sleep 0.1 && brightnessctl get
-    bindsym 4 exec sudo brightnessctl set 40% && sleep 0.1 && brightnessctl get
-    bindsym 5 exec sudo brightnessctl set 50% && sleep 0.1 && brightnessctl get
-    bindsym 6 exec sudo brightnessctl set 60% && sleep 0.1 && brightnessctl get
-    bindsym 7 exec sudo brightnessctl set 70% && sleep 0.1 && brightnessctl get
-    bindsym 8 exec sudo brightnessctl set 80% && sleep 0.1 && brightnessctl get
-    bindsym 9 exec sudo brightnessctl set 90% && sleep 0.1 && brightnessctl get
-    bindsym 0 exec sudo brightnessctl set 100% && sleep 0.1 && brightnessctl get
-    
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
 
 
 ## colours
@@ -196,10 +171,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 
-
 ## power menu
 
-bindsym $mod+Shift+Delete mode "power: [l]ock | [r]eboot | [s]uspend | sh[u]tdown"
+bindsym $mod+x mode "power: [l]ock | [r]eboot | [s]uspend | sh[u]tdown"
 
 mode "power: [l]ock | [r]eboot | [s]uspend | sh[u]tdown" {
     bindsym l exec i3-msg mode "default" && i3lock-fancy -pt ""
@@ -227,15 +201,11 @@ mode "shutdown: [y]es or [n]o" {
     bindsym Escape mode "default"
 }
 
+
 ## reload/restart i3
 
 bindsym $mod+Shift+w reload
 bindsym $mod+Shift+r restart
-
-
-## restart Mopidy
-
-# bindsym $mod+Shift+m exec gksudo -m 'Restart Mopidy service' systemctl restart mopidy
 
 
 ## resize windows
@@ -292,37 +262,12 @@ bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 
-bindsym $mod+slash mode "volume"
-
-mode "volume" {
-    bindsym plus exec pulseaudio-ctl up
-    bindsym minus exec pulseaudio-ctl down
-
-    bindsym Up exec pulseaudio-ctl up
-    bindsym Down exec pulseaudio-ctl down
-
-    bindsym 1 exec pulseaudio-ctl set 10
-    bindsym 2 exec pulseaudio-ctl set 20
-    bindsym 3 exec pulseaudio-ctl set 30
-    bindsym 4 exec pulseaudio-ctl set 40
-    bindsym 5 exec pulseaudio-ctl set 50
-    bindsym 6 exec pulseaudio-ctl set 60
-    bindsym 7 exec pulseaudio-ctl set 70
-    bindsym 8 exec pulseaudio-ctl set 80
-    bindsym 9 exec pulseaudio-ctl set 90
-    bindsym 0 exec pulseaudio-ctl set 100 
-    
-    bindsym m exec pulseaudio-ctl mute
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
 
 ## wallpaper/colours
 
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill ~/pictures/wp/seti/black.png
+exec_always --no-startup-id hsetroot -solid "#151718"
+
 
 ## window titles
 

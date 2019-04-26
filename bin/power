@@ -1,0 +1,21 @@
+#!/bin/sh
+
+output=$(printf "lock\nhibernate\nreboot\nsuspend\nshutdown\n" | rofi -dmenu)
+
+case "$output" in
+  lock)
+    i3lock-fancy -pt ""
+    ;;
+  suspend)
+    i3lock-fancy -pt "" && systemctl suspend
+    ;;
+  hibernate)
+    systemctl hibernate
+    ;;
+  restart)
+    systemctl reboot
+    ;;
+  shutdown)
+    systemctl poweroff
+    ;;
+esac
