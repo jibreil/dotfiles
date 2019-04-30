@@ -64,6 +64,8 @@ floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
+bindsym $mod+Control+space move position center
+
 
 ## font
 
@@ -117,9 +119,12 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+t layout toggle
 
 
-## lock
+## lock + suspend
 
-bindsym $mod+l exec i3lock-fancy -pt ""
+#bindsym $mod+l exec i3lock-fancy -pt ""
+#bindsym $mod+s exec i3lock-fancy -pt "" && systemctl suspend
+bindsym $mod+l exec betterlockscreen -l dim
+bindsym $mod+s exec betterlockscreen -s dim
 
 
 ## media controls
@@ -244,11 +249,6 @@ bindsym $mod+Shift+s exec nougat --screenshot -cst && dunstify "area/window scre
 
 bindsym Print exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
 bindsym $mod+Print exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
-
-
-## suspend
-
-bindsym $mod+s exec i3lock-fancy -pt "" && systemctl suspend
 
 
 ## URxvt
