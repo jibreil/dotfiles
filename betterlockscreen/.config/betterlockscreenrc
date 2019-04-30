@@ -1,0 +1,30 @@
+# configuration file for betterlockscreen
+
+# colour inside ring
+insidecolor=00000000
+# colour inside ring while checking
+insidevercolor=00000000
+# colour inside ring when you make an incorrect attempt
+insidewrongcolor=151718ff
+
+# colour of ring
+ringcolor=151718ff
+# colour of ring while checking
+ringvercolor=a074c4ff
+# colour of ring when you make an incorrect attempt
+ringwrongcolor=cd3f45ff
+
+# colour of section on ring when you press a key
+keyhlcolor=a074c4ff
+# colour of section on ring when you backspace
+bshlcolor=cd3f45ff
+
+# colour of time text
+timecolor=d0d0d0ff
+# colour of lockscreen text
+datecolor=d0d0d0ff
+
+# unknown
+separatorcolor=00000000
+verifcolor=0000ffff
+loginbox=00000066
