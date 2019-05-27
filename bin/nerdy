@@ -16,11 +16,11 @@ echo
 
 color-echo()
 {  # print with colors
-    echo -e " $grn$1  $rst$2"
+    echo -e " $prp$1  $rst$2"
 }
 
 # kernel
-#color-echo '		kernel' "$(uname -smr)"
+#color-echo 'kernel  '   "$(uname -smr)"
 
 # uptime
 up=$(</proc/uptime)
@@ -38,12 +38,12 @@ color-echo 'wm     '   'i3'
 # distro
 color-echo 'distro '   'Arch'
 
-# ascii art
+# art
 echo
-echo -e " |⌐ •_•| Jibreil"
+echo -e " ¯\_(•_•)_/¯"
 echo
+
 # colors
 echo -e " $red▪$rst $grn▪$rst $blu▪$rst $ylw▪$rst $cyn▪$rst $prp▪$rst $bprp▪$rst"
 
-echo
 echo

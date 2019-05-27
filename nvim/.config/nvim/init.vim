@@ -109,6 +109,8 @@ Plug 'google/vim-glaive'
 
 Plug 'airblade/vim-gitgutter'
 
+"Plug 'mzlogin/vim-markdown-toc'
+
 call plug#end()
 
 "=====================================================

@@ -4,15 +4,15 @@ output=$(printf "lock\nhibernate\nreboot\nsuspend\nshutdown\n" | rofi -dmenu)
 
 case "$output" in
   lock)
-    i3lock-fancy -pt ""
+    betterlockscreen -l dim
     ;;
   suspend)
-    i3lock-fancy -pt "" && systemctl suspend
+    betterlockscreen -s dim
     ;;
-  hibernate)
+  hibernatl)
     systemctl hibernate
     ;;
-  restart)
+  reboot)
     systemctl reboot
     ;;
   shutdown)
