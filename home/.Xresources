@@ -15,10 +15,10 @@ Xft.lcdfilter: lcddefault
 !URxvt.font:xft:curie:size=8
 !URxvt.boldFont:xft:curie:size=8
 
-URxvt.font: xft:Iosevka Term:style=regular:size=16
-URxvt.boldFont: xft:Iosevka Term:style=bold:size=16
-URxvt.italicFont: xft:Iosevka Term:style=italic:size=16
-URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=16
+URxvt.font: xft:Iosevka Term:style=regular:size=18
+URxvt.boldFont: xft:Iosevka Term:style=bold:size=18
+URxvt.italicFont: xft:Iosevka Term:style=italic:size=18
+URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=18
 
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: 1
