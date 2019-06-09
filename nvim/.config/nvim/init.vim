@@ -28,7 +28,7 @@
 
 augroup General
 
-    autocmd FileType markdown,text setlocal spell
+    autocmd FileType markdown,text,tex setlocal spell
 "    autocmd BufReadPost *.md Goyo 85%x85%
     autocmd VimResized * execute "normal \<C-W>="
 
@@ -103,6 +103,8 @@ set shiftwidth=4
 call plug#begin('~/.vim/plugged')
 
 "Plug 'francoiscabrol/ranger.vim'
+
+Plug 'lervag/vimtex'
 
 Plug 'junegunn/goyo.vim'
 
