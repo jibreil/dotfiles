@@ -1,16 +1,16 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
+alias dots='cd ~/github/dotfiles'
+alias uni='cd ~/uni/year1/sem1'
+
 alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
 alias clock='tty-clock -scD -C 5'
-alias delete='rm'
 alias e='fzf | xargs -r $EDITOR'
 alias el='exal'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
-alias imagenametime="exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%dT%H:%M:%S%%-c.%%e""
 alias n='nvim'
 alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5 --w3m --source ~/pictures/lock/pika.png'
-alias please='sudo'
 alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
@@ -26,9 +26,6 @@ sendit() {
     git commit -m "$1"
     git push
 }
-
-alias html='pandoc --webtex -o'
-alias pdf='pandoc -V geometry:margin=1in -V mainfont="Open Sans" --toc --pdf-engine=xelatex -o'
 
 c() {
     if [ $# -eq 0 ] ; then
