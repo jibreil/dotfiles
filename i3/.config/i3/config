@@ -79,8 +79,8 @@ font pango:iosevka 18
 
 ## gaps
 
-gaps inner 30
-gaps outer 10
+gaps inner 60
+gaps outer 0
 
 bindsym $mod+g mode "gaps: [i]nner | [o]uter"
 
