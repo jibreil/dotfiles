@@ -55,6 +55,9 @@ hi TabLineSel ctermfg=5 ctermbg=0
 hi TabLine ctermfg=7 ctermbg=0
 hi TabLineFill ctermfg=0 ctermbg=1
 
+hi LineNr ctermfg=8
+hi CursorLineNr ctermfg=1
+
 "=====================================================
 
 " Hide end-of-file symbols
@@ -101,7 +104,7 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'francoiscabrol/ranger.vim'
 
-"Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 
 Plug 'google/vim-codefmt'
 Plug 'google/vim-maktaba'
@@ -168,7 +171,7 @@ set splitright
 
 " UI
 
-set cmdheight=2
+set cmdheight=1
 set laststatus=1
 "set noshowmode
 set number
@@ -184,7 +187,7 @@ set ttyfast
 set breakindent
 set linebreak
 
-"nnoremap <down> gj
-"nnoremap <up> gk
-"vnoremap <down> gj
-"vnoremap <up> gk
+nnoremap <down> gj
+nnoremap <up> gk
+vnoremap <down> gj
+vnoremap <up> gk
