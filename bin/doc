@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# script to compile latex document
+# with references via bibtex
+
+name=$(echo $1 | cut -d . -f 1)
+
+pdflatex $name.tex
+bibtex $name.aux
+pdflatex $name.tex
+pdflatex $name.tex
