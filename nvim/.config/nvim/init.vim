@@ -1,195 +1,126 @@
-"=====================================================
-"      __ __ _             __    ___   ___  _
-"     / //_/(_)___  ___ _ / /__ |_  | |_  |( )___
-"    / ,<  / // _ \/ _ `//  '_// __/ / __/ |/(_-<
-"   /_/|_|/_//_//_/\_, //_/\_\/____//____/  /___/
-"                 /___/
-"                           _
-"     ___  ___  ___  _  __ (_)__ _
-"    / _ \/ -_)/ _ \| |/ // //  ' \
-"   /_//_/\__/ \___/|___//_//_/_/_/
-"
-"     _____             ___ _
-"    / ___/___   ___   / _/(_)___ _
-"   / /__ / _ \ / _ \ / _// // _ `/
-"   \___/ \___//_//_//_/ /_/ \_, /
-"                           /___/
-"
-"=====================================================
-
-" Always exit all files
-
-" cnoreabbrev q qa
-" cnoreabbrev wq wqa
-
-"=====================================================
-
-" Auto commands
-
+" auto commands
 augroup General
-
     autocmd FileType markdown,text,tex setlocal spell
-"    autocmd BufReadPost *.md Goyo 85%x85%
     autocmd VimResized * execute "normal \<C-W>="
-
 augroup END
 
-"=====================================================
-
-" Basic options
-
-set nocompatible
+" basic options
 filetype plugin on
+set nocompatible
+set path+=**
+set updatetime=100
+set wildmenu
 syntax on
 
-set path+=**
-set wildmenu
-
-set updatetime=100
-
-"=====================================================
-
-" Colours
-
+" colours
+hi LineNr ctermfg=8
+hi CursorLineNr ctermfg=5
 hi TabLineSel ctermfg=5 ctermbg=0
 hi TabLine ctermfg=7 ctermbg=0
 hi TabLineFill ctermfg=0 ctermbg=1
 
-hi LineNr ctermfg=8
-hi CursorLineNr ctermfg=1
+" disable bells
+set t_vb=
+set visualbell
 
-"=====================================================
-
-" Hide end-of-file symbols
-
+" hide end of file symbols
 hi EndOfBuffer ctermbg=black ctermfg=black guibg=black guifg=black
 
-"=====================================================
-
-" Indenting
-
+" indenting
 set autoindent
 set smartindent
 
-"=====================================================
-
-" Netrw
-
+" netrw
 let g:netrw_banner=0        " disable annoying banner
-"let g:netrw_browse_split=4  " open in prior window
-"let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-"=====================================================
-
-" No backup file
-
+" no backup file
 set nobackup
 
-"=====================================================
-
-" On pressing tab, insert 4 spaces
-
-set expandtab
-set tabstop=4
-set shiftwidth=4
-
-"=====================================================
-
-" Plugins
-
+" plugins
 call plug#begin('~/.vim/plugged')
-
-"Plug 'francoiscabrol/ranger.vim'
-
-Plug 'lervag/vimtex'
-
-Plug 'junegunn/goyo.vim'
-
-Plug 'google/vim-codefmt'
-Plug 'google/vim-maktaba'
-Plug 'google/vim-glaive'
-
-Plug 'airblade/vim-gitgutter'
-
-"Plug 'mzlogin/vim-markdown-toc'
-
+    Plug 'junegunn/goyo.vim'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'lervag/vimtex'
+    Plug 'google/vim-codefmt'
+    Plug 'google/vim-maktaba'
+    Plug 'google/vim-glaive'
 call plug#end()
 
-"=====================================================
-
-" Ranger
-
-"let g:ranger_map_keys = 0
-"map <leader>r :Ranger<CR>
-"let g:ranger_replace_netrw = 1
-
-"=====================================================
-
-" Searching
-
+" searching
 set hlsearch
-set incsearch
 set ignorecase
+set incsearch
 set smartcase
-
 nnoremap <esc> :noh<CR>
 
-"=====================================================
-
-" Set title of file as window title
-
+" set title of file as window title
 set title
 
-"=====================================================
-
-" Show invisible characters
-
+" show invisible characters
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
-"=====================================================
-
-" Spelling
-
+" spelling
 set spelllang=en_au
-
 hi SpellBad ctermbg=1 ctermfg=0
 
-"=====================================================
-
-" Splits
-
+" splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 set splitbelow
 set splitright
 
-"=====================================================
+" tab > 4 spaces
+set expandtab
+set shiftwidth=4
+set tabstop=4
 
-" UI
-
-set cmdheight=1
-set laststatus=1
-"set noshowmode
-set number
+" ui
 set relativenumber
 set scrolloff=10
-set shortmess=at
 set ttyfast
+"set cmdheight=1
+"set laststatus=1
+"set noshowmode
+"set shortmess=at
 
-"=====================================================
+" wrapping
+"nnoremap <down> gj
+"nnoremap <up> gk
+"vnoremap <down> gj
+"vnoremap <up> gk
+"set breakindent
+"set linebreak
 
-" Wrapping
+" no line wrapping
+set nowrap
+set textwidth=0
+set wrapmargin=0
 
-set breakindent
-set linebreak
+" status bar colors
+hi StatusLine ctermfg=0 ctermbg=8 cterm=none term=none
+hi User1 ctermfg=8 ctermbg=0 cterm=none term=none
+hi User2 ctermfg=8 ctermbg=none cterm=none term=none
+hi User3 ctermfg=8 ctermbg=0 cterm=none term=none
+hi User4 ctermfg=0 ctermbg=8 cterm=none term=none
 
-nnoremap <down> gj
-nnoremap <up> gk
-vnoremap <down> gj
-vnoremap <up> gk
+" status bar
+set statusline=\                    "
+set statusline+=%t                  "
+set statusline+=\ %1*\              "
+set statusline+=%y                  "
+set statusline+=\ %2*\              "
+set statusline+=%=                  "
+set statusline+=\ %3*\              "
+set statusline+=line                "
+set statusline+=\                   "
+set statusline+=%l                  "
+set statusline+=\ %4*\              "
+set statusline+=of                  "
+set statusline+=\                   "
+set statusline+=%L                  "
+set statusline+=\                   "
