@@ -21,12 +21,12 @@ secondary = #bf5f4d
 ;=====================================================
 
 [sizes]
-bar-width = 2520
-bar-height = 50
+bar-width = 2500
+bar-height = 80
 
-bar-offset-x = 40
+bar-offset-x = 60
 bar-top-gap = 20
-bar-bottom-gap = 20
+bar-bottom-gap = 40
 
 ;=====================================================
 
@@ -36,7 +36,7 @@ bottom = true
 fixed-center = true
 width = ${sizes.bar-width}
 height = ${sizes.bar-height}
-radius = 3.0
+radius = 15.0
 
 background = ${colours.background}
 foreground = ${colours.foreground}
@@ -56,9 +56,9 @@ padding-right = 5
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Wuncon Siji
-font-1 = FontAwesome:size=18;0
-font-2 = Iosevka:weight=medium:pixelsize=18;0
+font-0 = Wuncon Siji;5
+font-1 = FontAwesome:size=18;5
+font-2 = Iosevka:weight=medium:pixelsize=18;5
 font-3 = NotoSans-Regular:size=8;0
 font-4 = Kochi Gothic:size=8;0
 
