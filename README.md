@@ -15,7 +15,7 @@
 ```
 
 **See [https://dotfile.kingk22.xyz](https://dotfile.kingk22.xyz) for details 
-about programs used.
+about programs used.**
 
 # Screenshots
 
