@@ -14,28 +14,13 @@
 
 ```
 
-# Setup
-
-* **bar:** [polybar](https://github.com/jaagr/polybar)
-* **colour scheme:** [base16-seti](https://github.com/chriskempson/base16-xresources/blob/master/xresources/base16-seti-256.Xresources)
-* **font:** Iosevka
-* **launcher:** [rofi](https://github.com/DaveDavenport/rofi)
-* **locker:** [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
-* **os:** arch
-* **screenshot tool:** [nougat](https://github.com/Sweets/nougat)
-* **shell:** zsh [(oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh))
-* **terminal:** urxvt
-* **text editor:** neovim
-* **wm:** [i3-gaps](https://github.com/Airblader/i3)
+**See [https://dotfile.kingk22.xyz](https://dotfile.kingk22.xyz) for details 
+about programs used.
 
 # Screenshots
 
-![](screenshot0.png)
-
-![](screenshot1.png)
-
-![](screenshot2.png)
-
-![](screenshot3.png)
-
-![](screenshot4.png)
+![](https://u.teknik.io/HrVzb.png)
+![](https://u.teknik.io/MAMyG.png)
+![](https://u.teknik.io/l37n5.png)
+![](https://u.teknik.io/ygKrd.png)
+![](https://u.teknik.io/PNRQU.png)
