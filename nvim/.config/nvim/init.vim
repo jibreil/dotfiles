@@ -30,6 +30,19 @@ hi EndOfBuffer ctermbg=black ctermfg=black guibg=black guifg=black
 set autoindent
 set smartindent
 
+" line wrapping
+highlight ColorColumn ctermbg=8
+set colorcolumn=81
+set nowrap
+set textwidth=0
+set wrapmargin=0
+"nnoremap <down> gj
+"nnoremap <up> gk
+"vnoremap <down> gj
+"vnoremap <up> gk
+"set breakindent
+"set linebreak
+
 " netrw
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_liststyle=3     " tree view
@@ -87,19 +100,6 @@ set ttyfast
 "set laststatus=1
 "set noshowmode
 "set shortmess=at
-
-" wrapping
-"nnoremap <down> gj
-"nnoremap <up> gk
-"vnoremap <down> gj
-"vnoremap <up> gk
-"set breakindent
-"set linebreak
-
-" no line wrapping
-set nowrap
-set textwidth=0
-set wrapmargin=0
 
 " status bar colors
 hi StatusLine ctermfg=0 ctermbg=8 cterm=none term=none
