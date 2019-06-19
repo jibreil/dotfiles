@@ -233,19 +233,15 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = true
 
-label-mode = %mode%
+label-mode = " %mode%"
 label-mode-padding = 2
 label-mode-foreground = ${colours.purple}
 
-;label-focused = %name%
-label-focused = ""
+label-focused = ""
 label-focused-foreground = ${colours.purple}
-;label-focused-background = ${colours.background-alt}
-;label-focused-underline = ${colours.green}
 label-focused-padding = 4
 
-;label-unfocused = %name%
-label-unfocused = ""
+label-unfocused = ""
 label-unfocused-padding = 4
 label-unfocused-foreground = ${colours.primary}
 
@@ -253,11 +249,8 @@ label-visible = %name%
 label-visible-underline = ${colours.primary}
 label-visible-padding = 4
 
-;label-urgent = %name%
 label-urgent = ""
-;label-urgent-background = ${colours.purple}
 label-urgent-foreground = ${colours.alert}
-;label-urgent-underline = ${colours.alert}
 label-urgent-padding = 4
 
 ;=====================================================
