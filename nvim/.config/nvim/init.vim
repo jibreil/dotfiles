@@ -43,6 +43,9 @@ set wrapmargin=0
 "set breakindent
 "set linebreak
 
+" enable mouse support
+set mouse=a
+
 " netrw
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_liststyle=3     " tree view
@@ -93,6 +96,7 @@ set shiftwidth=4
 set tabstop=4
 
 " ui
+set number
 set relativenumber
 set scrolloff=10
 set ttyfast

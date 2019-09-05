@@ -1,19 +1,21 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
+alias dl='cd ~/downloads'
 alias dots='cd ~/github/dotfiles'
-alias uni='cd ~/uni/year1/sem1'
 
-alias arch='neofetch -L --ascii_colors 5 5 5 5 5 5'
+alias uni='cd ~/uni/year1/sem2'
+
 alias clock='tty-clock -scD -C 5'
 alias e='fzf | xargs -r $EDITOR'
 alias el='exal'
 alias exa='exa --group-directories-first'
 alias exal='exa -lFh --group-directories-first'
 alias n='nvim'
-alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5 --w3m --source ~/pictures/lock/pika.png'
+alias nf='neofetch --colors 5 7 7 5 5 7 --underline off --ascii_colors 5 5 5 5 5 5 --w3m --source ~/pictures/lock.png'
 alias q='exit'
 alias r='ranger'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
+alias za='zathura'
 
 alias add='git add -A'
 alias commit='git commit'
@@ -43,7 +45,8 @@ export EDITOR="nvim"
 
 # Set path
 
-export PATH=$PATH:/home/jibreil/bin
+# export PATH=$PATH:/home/jibreil/bin
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
