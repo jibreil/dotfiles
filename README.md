@@ -14,13 +14,4 @@
 
 ```
 
-**See [dotfiles.kingk22.xyz](https://dotfiles.kingk22.xyz) for details 
-about programs used.**
-
-# Screenshots
-
-![](https://u.teknik.io/HrVzb.png)
-![](https://u.teknik.io/MAMyG.png)
-![](https://u.teknik.io/l37n5.png)
-![](https://u.teknik.io/ygKrd.png)
-![](https://u.teknik.io/PNRQU.png)
+**See [dotfiles.kingk22.xyz](https://dotfiles.kingk22.xyz) for more details about programs used.**
