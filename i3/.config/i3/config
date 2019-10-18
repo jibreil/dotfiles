@@ -1,6 +1,9 @@
 ## auto start locker
 exec --no-startup-id betterlockscreen -l dim
 
+## swap backspace and backslash
+exec_always --no-startup-id xmodmap ~/.Xmodmap
+
 for_window [title="BlueJ:  Create Jar File"] floating disable
 
 ## bar

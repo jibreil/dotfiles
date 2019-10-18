@@ -4,6 +4,10 @@ alias dl='cd ~/downloads'
 alias dots='cd ~/github/dotfiles'
 
 alias uni='cd ~/uni/year1/sem2'
+alias appsprog='cd ~/uni/year1/sem2/appsprog'
+alias brm='cd ~/uni/year1/sem2/brm'
+alias fid='cd ~/uni/year1/sem2/fid'
+alias netfun='cd ~/uni/year1/sem2/netfun'
 
 alias clock='tty-clock -scD -C 5'
 alias e='fzf | xargs -r $EDITOR'
