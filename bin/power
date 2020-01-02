@@ -1,6 +1,6 @@
 #!/bin/sh
 
-output=$(printf "lock\nhibernate\nreboot\nsuspend\nshutdown\n" | rofi -dmenu)
+output=$(printf "lock\nreboot\nsuspend\nshutdown\n" | rofi -dmenu)
 
 case "$output" in
   lock)
@@ -8,9 +8,6 @@ case "$output" in
     ;;
   suspend)
     betterlockscreen -s dim
-    ;;
-  hibernatl)
-    systemctl hibernate
     ;;
   reboot)
     systemctl reboot

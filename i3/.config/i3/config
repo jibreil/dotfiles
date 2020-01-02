@@ -1,54 +1,65 @@
-## auto start locker
+## autostart
+
+# locker
 exec --no-startup-id betterlockscreen -l dim
-
-## swap backspace and backslash
-exec_always --no-startup-id xmodmap ~/.Xmodmap
-
-for_window [title="BlueJ:  Create Jar File"] floating disable
-
-## bar
+# auto tiling
+exec_always --no-startup-id ~/.config/i3/alternating_layouts.py
+# bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+# compton
+exec_always --no-startup-id .config/compton/launch.sh
+# dunst
+exec_always --no-startup-id ~/.config/dunst/launch.sh
+# keyboard remap
+exec_always --no-startup-id xmodmap ~/.Xmodmap
+# wallpaper
+exec_always --no-startup-id hsetroot -solid "#a074c4"
+#exec_always --no-startup-id feh --bg-fill ~/pictures/wp.jpg
+# load xresources
+exec_always --no-startup-id xrdb -load ~/.Xresources
 
-## borders
-for_window [class=".*"] border pixel 0
-#for_window [class="URxvt"] border pixel 8
-#for_window [class="Zathura"] border pixel 8
 
-## brightness
-bindsym XF86MonBrightnessUp exec brightnessctl set +10% && sleep 0.1 && brightnessctl get
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sleep 0.1 && brightnessctl get
+## appearance
 
-## colours
+# colours
 # class                  border    bg        text      indicator   child_border
-client.focused           #151718   #151718   #A074C4   #A074C4     #A074C4
+client.focused           #151718   #151718   #A074C4   #ffffff     #ffffff
 client.focused_inactive  #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.unfocused         #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.urgent            #151718   #151718   #e6cd69   #e6cd69
 
-## compton
-exec_always --no-startup-id compton
+# font
+font pango:SF Mono 18
 
-## change window focus
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# gaps
+gaps inner 60
 
-## dunst
-exec_always --no-startup-id ~/.config/dunst/launch.sh
+# no borders
+for_window [class=".*"] border pixel 0
 
-## floating windows
+# window titles
+for_window [class=".*"] title_format "  %title"
+
+
+## keybinds
+
+# mod key
+set $mod Mod4
+
+# brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10% && sleep 0.1 && brightnessctl get
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sleep 0.1 && brightnessctl get
+
+# floating windows
 floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Control+space move position center
 
-## font
-font pango:iosevka 18
+# fullscreen
+bindsym $mod+f fullscreen toggle
 
-## gaps
-gaps inner 60
-gaps outer 0
+# gaps
 bindsym $mod+g mode "gaps: [i]nner | [o]uter"
 mode "gaps: [i]nner | [o]uter" {
   bindsym o mode "gaps_outer"
@@ -76,27 +87,92 @@ mode "gaps_outer" {
   bindsym Escape mode "default"
 }
 
-## kill window
-bindsym $mod+Shift+q kill
-
-## layout
-bindsym $mod+f fullscreen toggle
+# layout (tiling, tabbed, stacked)
 bindsym $mod+t layout toggle
 
-## lock + suspend
+# lock/suspend
 bindsym $mod+l exec betterlockscreen -l dim
 bindsym $mod+s exec betterlockscreen -s dim
 
-## media controls
+# kill window
+bindsym $mod+Shift+q kill
+
+# media controls
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 
-## mod key
-set $mod Mod4
+# move window within workspace
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
-## move window to workspace
+# reload/restart i3
+bindsym $mod+Shift+w reload
+bindsym $mod+Shift+r restart
+
+# resizing windows
+bindsym $mod+r mode "resize"
+mode "resize" {
+  bindsym Up resize grow height
+  bindsym Down resize shrink height
+  bindsym Right resize grow width
+  bindsym Left resize shrink width
+
+  bindsym Escape mode "default"
+}
+
+# rofi (launcher)
+bindsym $mod+d exec rofi -show run
+bindsym $mod+w exec rofi -show window
+
+# scratchpad
+bindsym $mod+End move scratchpad
+bindsym $mod+Home scratchpad show
+
+# screenshots and recording
+bindsym $mod+Shift+s exec nougat --screenshot -cst && dunstify "area/window screenshot copied"
+bindsym Print exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
+bindsym $mod+Print exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
+
+# terminal
+bindsym $mod+Return exec urxvt --depth 32
+
+# window focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# volume
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5
+bindsym XF86AudioMute exec pulseaudio-ctl mute
+
+# window split direction
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# workspaces
+workspace_auto_back_and_forth yes
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Next workspace next
+bindsym $mod+Prior workspace prev
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -108,7 +184,6 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-## move window to workspace and go to workspace
 bindsym $mod+Ctrl+1 move container to workspace 1; workspace 1
 bindsym $mod+Ctrl+2 move container to workspace 2; workspace 2
 bindsym $mod+Ctrl+3 move container to workspace 3; workspace 3
@@ -120,79 +195,3 @@ bindsym $mod+Ctrl+8 move container to workspace 8; workspace 8
 bindsym $mod+Ctrl+9 move container to workspace 9; workspace 9
 bindsym $mod+Ctrl+0 move container to workspace 10; workspace 10
 
-## move window within workspace
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-## reload/restart i3
-bindsym $mod+Shift+w reload
-bindsym $mod+Shift+r restart
-
-## resize windows
-bindsym $mod+r mode "resize"
-mode "resize" {
-  bindsym Up resize grow height
-  bindsym Down resize shrink height
-  bindsym Right resize grow width
-  bindsym Left resize shrink width
-
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
-
-## rofi
-bindsym $mod+d exec rofi -show run
-bindsym $mod+w exec rofi -show window
-
-## scratchpad
-bindsym $mod+End move scratchpad
-bindsym $mod+Home scratchpad show
-
-## screenshot (nougat)
-bindsym $mod+Ctrl+f exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
-bindsym $mod+Shift+f exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
-bindsym $mod+Ctrl+s exec nougat --screenshot -cs && dunstify "area/window screenshot saved"
-bindsym $mod+Shift+s exec nougat --screenshot -cst && dunstify "area/window screenshot copied"
-bindsym Print exec nougat --screenshot -fcst && dunstify "fullscreen screenshot copied"
-bindsym $mod+Print exec nougat --screenshot -fcs && dunstify "fullscreen screenshot saved"
-
-## URxvt
-bindsym $mod+Return exec urxvt --depth 32
-
-## volume
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 5
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 5
-bindsym XF86AudioMute exec pulseaudio-ctl mute
-
-## wallpaper/colours
-exec_always --no-startup-id xrdb -load ~/.Xresources
-#exec_always --no-startup-id hsetroot -solid "#151718"
-exec_always --no-startup-id feh --bg-fill ~/pictures/wp.png
-
-## window titles
-for_window [class=".*"] title_format "  %title"
-
-## window split direction
-bindsym $mod+h split h
-bindsym $mod+v split v
-
-## workspace switching settings
-workspace_auto_back_and_forth yes
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-bindsym $mod+Next workspace next
-bindsym $mod+Prior workspace prev
-
-## workspace switching
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10

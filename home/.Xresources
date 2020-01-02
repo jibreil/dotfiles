@@ -1,3 +1,8 @@
+URxvt.perl-ext-common:  ...,clipboard,...
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
 ! Fonts
 
 Xft.dpi: 96
@@ -9,30 +14,24 @@ Xft.lcdfilter: lcddefault
 
 ! URxvt
 
-!URxvt.font: xft:scientifica:size=8
-!URxvt.boldFont: xft:scientifica:size=8
-
-!URxvt.font:xft:curie:size=8
-!URxvt.boldFont:xft:curie:size=8
-
-URxvt.font: xft:Iosevka Term:style=regular:size=18
-URxvt.boldFont: xft:Iosevka Term:style=bold:size=18
-URxvt.italicFont: xft:Iosevka Term:style=italic:size=18
-URxvt.boldItalicFont: xft:Iosevka Term:style=medium:size=18
+URxvt.font: xft:SF Mono:style=Medium:size=16
+URxvt.boldFont: xft:SF Mono:style=Bold:size=16
+URxvt.italicFont: xft:SF Mono:style=Medium Italic:size=16
+URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:size=16
 
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: 1
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 URxvt.scrollBar: false
 URxvt.externalBorder: 0
 URxvt.internalBorder: 60
 
 ! rofi
 
-rofi.bw: 8
-rofi.font: Iosevka Term Regular 14
+rofi.bw: 4
+rofi.font: SF Mono Regular 12
 rofi.color-enabled: true
-rofi.color-window: #151718, #a074c4, #2c2e2f
+rofi.color-window: #151718, #151718, #2c2e2f
 rofi.color-normal: #151718, #d0d0d0, #151718, #a074c4, #151718
 rofi.color-active: #151718, #d0d0d0, #151718, #a074c4, #151718
 rofi.color-urgent: #151718, #d0d0d0, #151718, #a074c4, #151718
@@ -41,7 +40,7 @@ rofi.line-margin: 5
 rofi.hide-scrollbar: true
 rofi.matching: fuzzy
 rofi.lines: 5
-rofi.width: 30
+rofi.width: 20
 ! rofi.location: 2
 rofi.padding: 40
 rofi.fullscreen: false

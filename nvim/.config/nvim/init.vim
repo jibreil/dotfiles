@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
     Plug 'google/vim-glaive'
+    Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
 
 " searching
