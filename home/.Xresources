@@ -5,10 +5,10 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-URxvt.font: xft:SF Mono:style=Medium:size=16
-URxvt.boldFont: xft:SF Mono:style=Bold:size=16
-URxvt.italicFont: xft:SF Mono:style=Medium Italic:size=16
-URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:size=16
+URxvt.font: xft:SF Mono:style=Medium:antialias=true:size=16
+URxvt.boldFont: xft:SF Mono:style=Bold:antialias=true:size=16
+URxvt.italicFont: xft:SF Mono:style=Medium Italic:antialias=true:size=16
+URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:antialias=true:size=16
 
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: 1
