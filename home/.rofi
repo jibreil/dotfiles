@@ -1,0 +1,20 @@
+rofi.bw: 4
+rofi.font: SF Mono Regular 12
+rofi.color-enabled: true
+rofi.color-window: #151718, #151718, #2c2e2f
+rofi.color-normal: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.color-active: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.color-urgent: #151718, #d0d0d0, #151718, #a074c4, #151718
+rofi.line-margin: 5
+rofi.hide-scrollbar: true
+rofi.matching: fuzzy
+rofi.lines: 5
+rofi.width: 20
+rofi.padding: 40
+rofi.fullscreen: false
+rofi.auto-select: true
+
+rofi.terminal: urxvt
+rofi.ssh-client: ssh
+
+rofi.dpi: 160
