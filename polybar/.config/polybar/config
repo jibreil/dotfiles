@@ -12,9 +12,16 @@ background = #00000000
 background-alt = #1B1D1E
 foreground = #d6d6d6
 primary = ${xrdb:color0}
-purple = ${xrdb:color0}
 alert = ${xrdb:color7}
-secondary = #bf5f4d
+
+black = ${xrdb:color0}
+red = ${xrdb:color1}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+blue = ${xrdb:color4}
+purple = ${xrdb:color5}
+cyan = ${xrdb:color6}
+white = ${xrdb:color7}
 
 ;=====================================================
 
@@ -107,7 +114,7 @@ inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
-format-foreground = ${colours.purple}
+format-foreground = ${colours.black}
 
 ;=====================================================
 
@@ -129,15 +136,15 @@ battery = BAT0
 adapter = AC0
 
 format-full = <label-full>
-format-full-foreground = ${colours.primary}
+format-full-foreground = ${colours.white}
 
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
-label-charging-foreground = ${colours.primary}
+label-charging-foreground = ${colours.white}
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-label-discharging-foreground = ${colours.purple}
+label-discharging-foreground = ${colours.black}
 
 label-full =  fully charged
 
@@ -146,14 +153,14 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colours.purple}
+ramp-capacity-foreground = ${colours.black}
 
 animation-charging-0 =  
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colours.primary}
+animation-charging-foreground = ${colours.white}
 animation-charging-framerate = 250
 
 ;=====================================================
@@ -202,7 +209,7 @@ time =  %R %p
 time-alt =  %d/%m/%y
 
 format = %{A1:~/bin/time-date:}<label>%{A}
-format-foreground = ${colours.purple}
+format-foreground = ${colours.black}
 
 ;=====================================================
 
@@ -226,23 +233,23 @@ index-sort = true
 wrapping-scroll = true
 
 label-mode = " %mode%"
-label-mode-foreground = ${colours.purple}
+label-mode-foreground = ${colours.black}
 label-mode-padding = 1
 
 label-focused = ""
-label-focused-foreground = ${colours.primary}
+label-focused-foreground = ${colours.black}
 label-focused-padding = 1
 
 label-unfocused = ""
-label-unfocused-foreground = ${colours.purple}
+label-unfocused-foreground = ${colours.black}
 label-unfocused-padding = 1
 
 label-visible = %name%
-label-visible-underline = ${colours.purple}
+label-visible-underline = ${colours.black}
 label-visible-padding = 1
 
 label-urgent = ""
-label-urgent-foreground = ${colours.alert}
+label-urgent-foreground = ${colours.black}
 label-urgent-padding = 1
 
 ;=====================================================
@@ -290,8 +297,8 @@ label-connected =  wifi: %essid%
 format-disconnected = <label-disconnected>
 label-disconnected =  wifi: dc
 
-format-connected-foreground = ${colours.purple}
-format-disconnected-foreground = ${colours.primary}
+format-connected-foreground = ${colours.black}
+format-disconnected-foreground = ${colours.white}
 
 ;==========================
 
@@ -352,7 +359,7 @@ scroll-up =  ~/.config/polybar/pulseaudio-rofi.sh --volume_up
 scroll-down = ~/.config/polybar/pulseaudio-rofi.sh --volume_down
 
 format =  <label>
-format-foreground = ${colours.purple}
+format-foreground = ${colours.black}
 
 ;[module/volume]
 ;type = internal/volume
