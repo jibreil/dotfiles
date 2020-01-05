@@ -1,0 +1,49 @@
+window.background.chromium {
+    background-color: #151718;
+}
+
+@import 'colors.css';
+
+/* Thunar */
+
+.thunar #location-toolbar {
+	margin-right: 25px;
+	margin-left: 5px;
+}
+
+.thunar .horizontal, 
+.thunar .frame, 
+.thunar .view * {
+	border: none;
+}
+
+.thunar .standard-view,
+.thunar .sidebar {
+	padding: 15px;
+}
+
+.thunar separator {
+	background: transparent;
+}
+
+.thunar .sidebar treeview {
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+/* Global */
+
+menu {
+	box-shadow: none;
+	border: none;
+}
+
+overshoot {
+	background: none;
+	background-image: none;
+}
+
+undershoot {
+	background: none;
+	background-image: none;
+}
