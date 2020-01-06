@@ -73,7 +73,7 @@ else
 fi
 
 if [[ -n "${input}" ]]; then
-    output=$(curl -u <username>:<token> --silent --data "${querystring}" --data-urlencode "code=${input}" https://api.teknik.io/v1/Paste)
+    output=$(curl -u $TEKNIKUSER:$TEKNIKPASS --silent --data "${querystring}" --data-urlencode "code=${input}" https://api.teknik.io/v1/Paste)
     pasteid=$(grep -Eo '"id":"[0-9a-zA-Z]+' <<< "${output}" | sed 's/\\//g')
     pasteid="${pasteid##\"id\":\"}"
     if [[ -n "${pasteid}" ]]; then

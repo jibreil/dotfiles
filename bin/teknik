@@ -88,7 +88,7 @@ upload(){
     if
         [[ ${uploadme} =~ png ]]
     then
-        url=$(curl -u <username>:<token> -silent -F file="@$uploadme;type=image/png" "https://api.teknik.io/v1/Upload")
+        url=$(curl -u $TEKNIKUSER:$TEKNIKPASS -silent -F file="@$uploadme;type=image/png" "https://api.teknik.io/v1/Upload")
         if
             [[ "${url}" =~ "error" ]]; then
             printf  'error uploading file!\n'
@@ -98,7 +98,7 @@ upload(){
             url="https://u.teknik.io/${url%%\"*}"
         fi
     else
-        url=$(curl -u <username>:<token> -silent -F file="@$uploadme" "https://api.teknik.io/v1/Upload")
+        url=$(curl -u $TEKNIKUSER:$TEKNIKPASS -silent -F file="@$uploadme" "https://api.teknik.io/v1/Upload")
         if
             [[ "${url}" =~ "error" ]]; then
             printf	'error uploading file!\n'
