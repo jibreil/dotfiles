@@ -1,15 +1,15 @@
 # Aliases (personal aliases set here override default oh-my-zsh aliases)
 
-alias nautilus='GTK_THEME=oomox-sage nautilus'
-alias thunar='GTK_THEME=oomox-sage thunar'
-alias Thunar='GTK_THEME=oomox-sage thunar'
+#alias nautilus='GTK_THEME=oomox-sage nautilus'
+#alias thunar='GTK_THEME=oomox-sage thunar'
+#alias Thunar='GTK_THEME=oomox-sage thunar'
 
 alias dl='cd ~/downloads'
 alias dots='cd ~/github/dotfiles'
 alias uni='cd ~/uni/year2/sem1'
 
-alias irc='irc -n kingk22 -s chat.freenode.net'
-source .pw
+alias birch='~/github/birch/birch -u kingk22 -x '/msg NickServ IDENTIFY $IRCPASS' -c '#kisslinux''
+alias irc='~/github/icyrc/irc -n kingk22 -s chat.freenode.net'
 
 alias 6cord='TERM=xterm-256color 6cord'
 alias clock='tty-clock -scD -C 5'
@@ -44,6 +44,9 @@ c() {
         cat "$1"
     fi
 }
+
+# source password file
+source $HOME/.pw
 
 # default editor
 export EDITOR="nvim"

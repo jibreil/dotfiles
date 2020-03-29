@@ -69,7 +69,7 @@ font-2 = FontAwesome:size=18;5
 
 modules-left = i3
 modules-center = xwindow
-modules-right = xkeyboard bluetooth wlan backlight-acpi pulseaudio-rofi battery date
+modules-right = xkeyboard bluetooth wlan backlight-acpi pulseaudio battery date
 
 ;separator = |
 
@@ -249,7 +249,7 @@ label-visible-underline = ${colours.black}
 label-visible-padding = 1
 
 label-urgent = ""
-label-urgent-foreground = ${colours.black}
+label-urgent-foreground = ${colours.white}
 label-urgent-padding = 1
 
 ;=====================================================
@@ -304,7 +304,7 @@ format-disconnected-foreground = ${colours.white}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp0s31f6
 interval = 3.0
 
 format-connected = <label-connected>
@@ -361,20 +361,33 @@ scroll-down = ~/.config/polybar/pulseaudio-rofi.sh --volume_down
 format =  <label>
 format-foreground = ${colours.black}
 
-;[module/volume]
-;type = internal/volume
-;format-volume = <label-volume>
-;label-volume =  %percentage%%
-;format-muted = <label-muted>
-;label-muted =  mute
-;format-volume-foreground = ${colours.primary}
-;format-muted-foreground = ${colours.purple}
+[module/volume]
+type = internal/volume
+format-volume = <label-volume>
+label-volume =  %percentage%%
+format-muted = <label-muted>
+label-muted =  mute
+format-volume-foreground = ${colours.primary}
+format-muted-foreground = ${colours.purple}
 
-;[module/pulseaudio]
-;type = internal/pulseaudio
-;sink = (from 'pacmd list-sinks | grep -i "name.*>"'
-;use-ui-max = true
-;interval = 5
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = (from 'pacmd list-sinks | grep -i "name.*>"'
+use-ui-max = true
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = ${colours.primary}
+
+label-muted =  muted
+label-muted-foreground = ${colours.white}
+
+;ramp-volume-0 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+
+click-right = pavucontrol &
 
 ;=====================================================
 

@@ -3,17 +3,17 @@
 # locker
 exec --no-startup-id betterlockscreen -l dim
 # auto tiling
-exec_always --no-startup-id ~/.config/i3/alternating_layouts.py
+#exec_always --no-startup-id ~/.config/i3/alternating_layouts.py
 # bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # compton
-exec_always --no-startup-id .config/compton/launch.sh
+exec_always --no-startup-id ~/.config/compton/launch.sh
 # dunst
 exec_always --no-startup-id ~/.config/dunst/launch.sh
 # keyboard remap
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 # wallpaper
-exec_always --no-startup-id hsetroot -solid "#a074c4"
+exec_always --no-startup-id hsetroot -solid "#44475a"
 #exec_always --no-startup-id feh --bg-fill ~/pictures/wp.jpg
 # load xresources
 exec_always --no-startup-id xrdb -load ~/.Xresources
@@ -125,7 +125,8 @@ mode "resize" {
 }
 
 # rofi (launcher)
-bindsym $mod+d exec rofi -show run
+#bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -run-list-command ". ~/.config/rofi/zsh_aliases_functions" -run-command "/bin/zsh -i -c '{cmd}'" -rnow
 bindsym $mod+w exec rofi -show window
 
 # scratchpad

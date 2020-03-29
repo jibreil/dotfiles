@@ -19,6 +19,10 @@ hi TabLineSel ctermfg=5 ctermbg=0
 hi TabLine ctermfg=7 ctermbg=0
 hi TabLineFill ctermfg=0 ctermbg=1
 
+" compiling
+autocmd Filetype c set makeprg=gcc\ -o\ '%<'.out\ '%'
+autocmd Filetype cpp,c++ set makeprg=g++\ -o\ '%<'.out\ '%'\ -std=c++17
+
 " disable bells
 set t_vb=
 set visualbell
